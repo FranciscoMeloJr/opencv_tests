@@ -231,8 +231,11 @@ static std::clock_t execute_command(string command = "version", String filename 
 
     if(output)
     {
+        std::string intro = "\tUsing OpenCV version ";
+        std::string s = CV_VERSION;
+        intro.append(s + "\n");
         std::string content = oss.str();
-        write_file(content);
+        write_file( intro +" "+content);
     }
     return elapsed_time;
 }
