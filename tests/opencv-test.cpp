@@ -92,22 +92,49 @@ int write_file () {
 }
 
 //Help:
-void help(String filename ){
+void help(){
 
         cout <<" Usage: <command_name> <filename.jog>" << endl;
         cout <<" Usage: <display_image>" << endl;
         cout <<" Usage: <hough_lines>" << endl;
         cout <<" Usage: <face_detection>" << endl;
         cout <<" Usage: <version>" << endl;
-        cout << filename << endl;
         return;
 
 }
 //Keys:
 const char* keys =
 {
-    "{help h||}{@image|obama.jpg|input image file}"
+    "{help h||}{@command|version|command}{@image|../data/obama.jpg|input image file}{@counter n| 100 |number of times to run}"
+
 };
+//Select command:
+static std::clock_t execute_command(string command, String filename, int counter)
+{
+    clock_t elapsed_time = NULL;
+    if(command.compare("display_image") == 0 ){
+            cout << "<display_image>" << endl;
+            elapsed_time = display(filename, counter);
+    }
+    if(command.compare("hough_lines") == 0 ){
+            cout <<"<hough_lines>" << endl;
+            elapsed_time = houghlines(filename, counter);
+    }
+
+    if(command.compare("face_detection") == 0 ){
+            cout <<"<face_detection>" << endl;
+            elapsed_time = face_detection(filename, counter);
+    }
+    if(command.compare("version") == 0 ){
+        cout << "\tUsing OpenCV version " << CV_VERSION << "\n" << endl;
+    }
+    if(command.size() == 0 ){
+        cout << command << " command not found" << endl;
+        return 0;
+    }
+
+    return elapsed_time;
+}
 //Main:
 int main( int argc, char** argv )
 {
@@ -115,50 +142,23 @@ int main( int argc, char** argv )
 
         cv::CommandLineParser parser(argc, argv, keys);
         parser.about("OpenCv Tests v1.0.0");
-        cv::String filename;
-        filename = { "{ filename h| |}" };
+
         if (parser.has("help"))
         {
-                help(filename);
+                help();
                 return 0;
         }
 
-        String command = argv[1];
+        String inputCommand = parser.get<String>(0);
+        String inputImage = parser.get<String>(1);
+        int inputTimes = parser.get<int>(2);
 
-        String filename = argv[2];
-        int counter = NULL;
-        if(argv[3]!=NULL){
-            counter = times;
-        }
-        clock_t elapsed_time = NULL;
+        String command = inputCommand;
+        String filename = inputImage;
 
-        if(command.compare("display_image") == 0 ){
-                cout << "<display_image>" << endl;
-                elapsed_time = display(filename, counter);
-        }
-        if(command.compare("hough_lines") == 0 ){
-                cout <<"<hough_lines>" << endl;
-                elapsed_time = houghlines(filename, counter);
-        }
+        std::clock_t elapsed_time = execute_command(inputCommand,inputImage,inputTimes);
+        std::cout << command << " elapsed time: " << elapsed_time << " ns in " << inputTimes << " times "<< std::endl;
 
-        if(command.compare("face_detection") == 0 ){
-                cout <<"<face_detection>" << endl;
-                elapsed_time = face_detection(filename, counter);
-        }
-        if(command.compare("version") == 0 ){
-            cout << "\tUsing OpenCV version " << CV_VERSION << "\n" << endl;
-        }
-        if(command.size() == 0 ){
-            cout << command << " command not found" << endl;
-            return 0;
-        }
-
-        if(counter != NULL){
-            std::cout << command << " elapsed time: " << elapsed_time << " ns in" << counter << " times "<< std::endl;
-        }
-        else{
-            std::cout << command << " elapsed time: " << elapsed_time << " ns in 100 times" << std::endl;
-        }
 
     }
     catch (int e)
