@@ -193,10 +193,14 @@ const char* keys =
 static std::clock_t execute_command(string command = "version", String filename = "../data/obama.jpg", int counter = 100, bool output = false)
 {
     clock_t elapsed_time = NULL;
+    std::ostringstream oss;
+
     if(command.compare("display_image") == 0 ){
             cout << "<display_image>" << endl;
             for(int i = 0 ; i < counter; i++){
                 elapsed_time = display(filename);
+                std::cout << command << " elapsed time: " << elapsed_time << " ns in " << counter << " times "<< std::endl;
+                oss << elapsed_time << "\n";
             }
     }
     if(command.compare("hough_lines") == 0 ){
@@ -204,6 +208,8 @@ static std::clock_t execute_command(string command = "version", String filename 
             cout << filename << endl;
             for(int i = 0 ; i < counter; i++){
                 elapsed_time = houghlines(filename);
+                std::cout << command << " elapsed time: " << elapsed_time << " ns in " << counter << " times "<< std::endl;
+                oss <<  elapsed_time << "\n";
             }
     }
 
@@ -211,6 +217,8 @@ static std::clock_t execute_command(string command = "version", String filename 
             cout <<"<face_detection>" << endl;
             for(int i = 0 ; i < counter; i++){
                 elapsed_time = face_detection(filename);
+                std::cout << command << " elapsed time: " << elapsed_time << " ns in " << counter << " times "<< std::endl;
+                oss << elapsed_time << "\n";
             }
     }
     if(command.compare("version") == 0 ){
@@ -221,6 +229,11 @@ static std::clock_t execute_command(string command = "version", String filename 
         return 0;
     }
 
+    if(output)
+    {
+        std::string content = oss.str();
+        write_file(content);
+    }
     return elapsed_time;
 }
 
@@ -248,9 +261,7 @@ int main( int argc, char** argv )
                 parser.printErrors();
                 return -1;
         }
-        std::clock_t elapsed_time = execute_command(inputCommand,inputImage,inputTimes, output);
-        std::cout << inputCommand << " elapsed time: " << elapsed_time << " ns in " << inputTimes << " times "<< std::endl;
-
+        execute_command(inputCommand,inputImage,inputTimes, output);
 
     }
     catch (int e)
