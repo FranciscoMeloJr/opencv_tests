@@ -1,0 +1,12 @@
+set style histogram clustered
+set xtics rotate by -90
+unset title
+set xlabel "Survey metadata attribute subset"
+set ylabel "Accuracy of classifier (%)"
+set boxwidth 1
+set style fill solid
+set term png
+set output "so.png"
+plot [-0.5:2.75][1:17] "so.dat"using 3:xtic(2) title "PART" with histograms, \
+     "" using 4 title "JRip" with histograms, \
+     "" using 5 title "FURIA" with histograms
