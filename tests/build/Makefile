@@ -45,7 +45,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = "/home/frank/Desktop/Research/OpenCV test/tests"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/frank/Desktop/Research/OpenCV test/tests"
+CMAKE_BINARY_DIR = "/home/frank/Desktop/Research/OpenCV test/tests/build"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -72,9 +72,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/frank/Desktop/Research/OpenCV test/tests/CMakeFiles" "/home/frank/Desktop/Research/OpenCV test/tests/CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/frank/Desktop/Research/OpenCV test/tests/build/CMakeFiles" "/home/frank/Desktop/Research/OpenCV test/tests/build/CMakeFiles/progress.marks"
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/frank/Desktop/Research/OpenCV test/tests/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/frank/Desktop/Research/OpenCV test/tests/build/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -102,24 +102,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named OpenCvProject
+# Target rules for targets named FranciscoProject
 
 # Build rule for target.
-OpenCvProject: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 OpenCvProject
-.PHONY : OpenCvProject
+FranciscoProject: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 FranciscoProject
+.PHONY : FranciscoProject
 
 # fast build rule for target.
-OpenCvProject/fast:
-	$(MAKE) -f CMakeFiles/OpenCvProject.dir/build.make CMakeFiles/OpenCvProject.dir/build
-.PHONY : OpenCvProject/fast
+FranciscoProject/fast:
+	$(MAKE) -f CMakeFiles/FranciscoProject.dir/build.make CMakeFiles/FranciscoProject.dir/build
+.PHONY : FranciscoProject/fast
 
 opencv-test.o: opencv-test.cpp.o
 .PHONY : opencv-test.o
 
 # target to build an object file
 opencv-test.cpp.o:
-	$(MAKE) -f CMakeFiles/OpenCvProject.dir/build.make CMakeFiles/OpenCvProject.dir/opencv-test.cpp.o
+	$(MAKE) -f CMakeFiles/FranciscoProject.dir/build.make CMakeFiles/FranciscoProject.dir/opencv-test.cpp.o
 .PHONY : opencv-test.cpp.o
 
 opencv-test.i: opencv-test.cpp.i
@@ -127,7 +127,7 @@ opencv-test.i: opencv-test.cpp.i
 
 # target to preprocess a source file
 opencv-test.cpp.i:
-	$(MAKE) -f CMakeFiles/OpenCvProject.dir/build.make CMakeFiles/OpenCvProject.dir/opencv-test.cpp.i
+	$(MAKE) -f CMakeFiles/FranciscoProject.dir/build.make CMakeFiles/FranciscoProject.dir/opencv-test.cpp.i
 .PHONY : opencv-test.cpp.i
 
 opencv-test.s: opencv-test.cpp.s
@@ -135,7 +135,7 @@ opencv-test.s: opencv-test.cpp.s
 
 # target to generate assembly for a file
 opencv-test.cpp.s:
-	$(MAKE) -f CMakeFiles/OpenCvProject.dir/build.make CMakeFiles/OpenCvProject.dir/opencv-test.cpp.s
+	$(MAKE) -f CMakeFiles/FranciscoProject.dir/build.make CMakeFiles/FranciscoProject.dir/opencv-test.cpp.s
 .PHONY : opencv-test.cpp.s
 
 # Help Target
@@ -146,7 +146,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... OpenCvProject"
+	@echo "... FranciscoProject"
 	@echo "... opencv-test.o"
 	@echo "... opencv-test.i"
 	@echo "... opencv-test.s"

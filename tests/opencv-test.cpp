@@ -1,6 +1,6 @@
-﻿#include "/home/frank/Desktop/opencv/include/opencv2/opencv.hpp"
-//#include <opencv2/core/core.hpp>
-//#include <opencv2/highgui/highgui.hpp>
+﻿#include <opencv2/opencv.hpp>
+#include <opencv2/core/core.hpp>
+#include <opencv2/highgui/highgui.hpp>
 #include <iostream>
 #include <ctime>
 #include <fstream>
@@ -232,6 +232,8 @@ static std::clock_t execute_command(string command = "version", String filename 
     }
     if(command.compare("version") == 0 ){
         cout << "\tUsing OpenCV version " << CV_VERSION << "\n" << endl;
+        cout << "\tUsing OpenCV MAJOR " << CV_VERSION_MAJOR << "\n" << endl;
+         cout << "\tUsing OpenCV MINOR " << CV_VERSION_MINOR << "\n" << endl;
     }
     if(command.size() == 0 ){
         cout << command << " use a command or help" << endl;

@@ -1,0 +1,532 @@
+Script to compile the stuff:
+-- The C compiler identification is GNU 5.2.1
+-- The CXX compiler identification is GNU 5.2.1
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/frank/Desktop/Research/OpenCV test/tests
+Scanning dependencies of target OpenCvProject
+[100%] Building CXX object CMakeFiles/OpenCvProject.dir/opencv-test.cpp.o
+Linking CXX executable OpenCvProject
+[100%] Built target OpenCvProject
+<display_image>
+display_image elapsed time: 25308 ns in 100 times 
+display_image elapsed time: 26090 ns in 100 times 
+display_image elapsed time: 26671 ns in 100 times 
+display_image elapsed time: 27254 ns in 100 times 
+display_image elapsed time: 27822 ns in 100 times 
+display_image elapsed time: 28376 ns in 100 times 
+display_image elapsed time: 28928 ns in 100 times 
+display_image elapsed time: 29493 ns in 100 times 
+display_image elapsed time: 30023 ns in 100 times 
+display_image elapsed time: 30571 ns in 100 times 
+display_image elapsed time: 31123 ns in 100 times 
+display_image elapsed time: 31672 ns in 100 times 
+display_image elapsed time: 32202 ns in 100 times 
+display_image elapsed time: 32726 ns in 100 times 
+display_image elapsed time: 33246 ns in 100 times 
+display_image elapsed time: 33781 ns in 100 times 
+display_image elapsed time: 34305 ns in 100 times 
+display_image elapsed time: 34844 ns in 100 times 
+display_image elapsed time: 35366 ns in 100 times 
+display_image elapsed time: 35893 ns in 100 times 
+display_image elapsed time: 36422 ns in 100 times 
+display_image elapsed time: 36962 ns in 100 times 
+display_image elapsed time: 37485 ns in 100 times 
+display_image elapsed time: 38022 ns in 100 times 
+display_image elapsed time: 38565 ns in 100 times 
+display_image elapsed time: 39097 ns in 100 times 
+display_image elapsed time: 39625 ns in 100 times 
+display_image elapsed time: 40140 ns in 100 times 
+display_image elapsed time: 40666 ns in 100 times 
+display_image elapsed time: 41193 ns in 100 times 
+display_image elapsed time: 41722 ns in 100 times 
+display_image elapsed time: 42221 ns in 100 times 
+display_image elapsed time: 42730 ns in 100 times 
+display_image elapsed time: 43218 ns in 100 times 
+display_image elapsed time: 43701 ns in 100 times 
+display_image elapsed time: 44182 ns in 100 times 
+display_image elapsed time: 44666 ns in 100 times 
+display_image elapsed time: 45156 ns in 100 times 
+display_image elapsed time: 45659 ns in 100 times 
+display_image elapsed time: 46152 ns in 100 times 
+display_image elapsed time: 46656 ns in 100 times 
+display_image elapsed time: 47151 ns in 100 times 
+display_image elapsed time: 47644 ns in 100 times 
+display_image elapsed time: 48129 ns in 100 times 
+display_image elapsed time: 48611 ns in 100 times 
+display_image elapsed time: 49098 ns in 100 times 
+display_image elapsed time: 49592 ns in 100 times 
+display_image elapsed time: 50120 ns in 100 times 
+display_image elapsed time: 50610 ns in 100 times 
+display_image elapsed time: 51097 ns in 100 times 
+display_image elapsed time: 51583 ns in 100 times 
+display_image elapsed time: 52077 ns in 100 times 
+display_image elapsed time: 52542 ns in 100 times 
+display_image elapsed time: 53004 ns in 100 times 
+display_image elapsed time: 53498 ns in 100 times 
+display_image elapsed time: 54015 ns in 100 times 
+display_image elapsed time: 54520 ns in 100 times 
+display_image elapsed time: 55018 ns in 100 times 
+display_image elapsed time: 55521 ns in 100 times 
+display_image elapsed time: 56005 ns in 100 times 
+display_image elapsed time: 56490 ns in 100 times 
+display_image elapsed time: 56974 ns in 100 times 
+display_image elapsed time: 57464 ns in 100 times 
+display_image elapsed time: 57972 ns in 100 times 
+display_image elapsed time: 58462 ns in 100 times 
+display_image elapsed time: 58969 ns in 100 times 
+display_image elapsed time: 59468 ns in 100 times 
+display_image elapsed time: 59967 ns in 100 times 
+display_image elapsed time: 60426 ns in 100 times 
+display_image elapsed time: 60886 ns in 100 times 
+display_image elapsed time: 61345 ns in 100 times 
+display_image elapsed time: 61857 ns in 100 times 
+display_image elapsed time: 62359 ns in 100 times 
+display_image elapsed time: 62845 ns in 100 times 
+display_image elapsed time: 63344 ns in 100 times 
+display_image elapsed time: 63855 ns in 100 times 
+display_image elapsed time: 64342 ns in 100 times 
+display_image elapsed time: 64826 ns in 100 times 
+display_image elapsed time: 65292 ns in 100 times 
+display_image elapsed time: 65808 ns in 100 times 
+display_image elapsed time: 66305 ns in 100 times 
+display_image elapsed time: 66792 ns in 100 times 
+display_image elapsed time: 67276 ns in 100 times 
+display_image elapsed time: 67779 ns in 100 times 
+display_image elapsed time: 68272 ns in 100 times 
+display_image elapsed time: 68783 ns in 100 times 
+display_image elapsed time: 69274 ns in 100 times 
+display_image elapsed time: 69769 ns in 100 times 
+display_image elapsed time: 70262 ns in 100 times 
+display_image elapsed time: 70753 ns in 100 times 
+display_image elapsed time: 71243 ns in 100 times 
+display_image elapsed time: 71765 ns in 100 times 
+display_image elapsed time: 72255 ns in 100 times 
+display_image elapsed time: 72741 ns in 100 times 
+display_image elapsed time: 73229 ns in 100 times 
+display_image elapsed time: 73730 ns in 100 times 
+display_image elapsed time: 74231 ns in 100 times 
+display_image elapsed time: 74732 ns in 100 times 
+display_image elapsed time: 75230 ns in 100 times 
+display_image elapsed time: 75732 ns in 100 times 
+<hough_lines>
+../data/obama.jpg
+hough_lines elapsed time: 3386 ns in 100 times 
+hough_lines elapsed time: 3143 ns in 100 times 
+hough_lines elapsed time: 3030 ns in 100 times 
+hough_lines elapsed time: 3031 ns in 100 times 
+hough_lines elapsed time: 3030 ns in 100 times 
+hough_lines elapsed time: 3033 ns in 100 times 
+hough_lines elapsed time: 3021 ns in 100 times 
+hough_lines elapsed time: 3015 ns in 100 times 
+hough_lines elapsed time: 3025 ns in 100 times 
+hough_lines elapsed time: 3025 ns in 100 times 
+hough_lines elapsed time: 3055 ns in 100 times 
+hough_lines elapsed time: 3037 ns in 100 times 
+hough_lines elapsed time: 3033 ns in 100 times 
+hough_lines elapsed time: 3029 ns in 100 times 
+hough_lines elapsed time: 3025 ns in 100 times 
+hough_lines elapsed time: 3027 ns in 100 times 
+hough_lines elapsed time: 3024 ns in 100 times 
+hough_lines elapsed time: 3072 ns in 100 times 
+hough_lines elapsed time: 3110 ns in 100 times 
+hough_lines elapsed time: 3061 ns in 100 times 
+hough_lines elapsed time: 3036 ns in 100 times 
+hough_lines elapsed time: 3049 ns in 100 times 
+hough_lines elapsed time: 3078 ns in 100 times 
+hough_lines elapsed time: 3032 ns in 100 times 
+hough_lines elapsed time: 3020 ns in 100 times 
+hough_lines elapsed time: 3023 ns in 100 times 
+hough_lines elapsed time: 3025 ns in 100 times 
+hough_lines elapsed time: 3028 ns in 100 times 
+hough_lines elapsed time: 3029 ns in 100 times 
+hough_lines elapsed time: 3115 ns in 100 times 
+hough_lines elapsed time: 3049 ns in 100 times 
+hough_lines elapsed time: 3071 ns in 100 times 
+hough_lines elapsed time: 3138 ns in 100 times 
+hough_lines elapsed time: 3061 ns in 100 times 
+hough_lines elapsed time: 3256 ns in 100 times 
+hough_lines elapsed time: 3062 ns in 100 times 
+hough_lines elapsed time: 3029 ns in 100 times 
+hough_lines elapsed time: 3039 ns in 100 times 
+hough_lines elapsed time: 3032 ns in 100 times 
+hough_lines elapsed time: 3032 ns in 100 times 
+hough_lines elapsed time: 3033 ns in 100 times 
+hough_lines elapsed time: 3023 ns in 100 times 
+hough_lines elapsed time: 3017 ns in 100 times 
+hough_lines elapsed time: 3025 ns in 100 times 
+hough_lines elapsed time: 3028 ns in 100 times 
+hough_lines elapsed time: 3029 ns in 100 times 
+hough_lines elapsed time: 3038 ns in 100 times 
+hough_lines elapsed time: 3063 ns in 100 times 
+hough_lines elapsed time: 3048 ns in 100 times 
+hough_lines elapsed time: 3040 ns in 100 times 
+hough_lines elapsed time: 3051 ns in 100 times 
+hough_lines elapsed time: 3061 ns in 100 times 
+hough_lines elapsed time: 3105 ns in 100 times 
+hough_lines elapsed time: 3065 ns in 100 times 
+hough_lines elapsed time: 3053 ns in 100 times 
+hough_lines elapsed time: 3023 ns in 100 times 
+hough_lines elapsed time: 3029 ns in 100 times 
+hough_lines elapsed time: 3041 ns in 100 times 
+hough_lines elapsed time: 3035 ns in 100 times 
+hough_lines elapsed time: 3021 ns in 100 times 
+hough_lines elapsed time: 3015 ns in 100 times 
+hough_lines elapsed time: 3067 ns in 100 times 
+hough_lines elapsed time: 3041 ns in 100 times 
+hough_lines elapsed time: 3098 ns in 100 times 
+hough_lines elapsed time: 3048 ns in 100 times 
+hough_lines elapsed time: 3028 ns in 100 times 
+hough_lines elapsed time: 3027 ns in 100 times 
+hough_lines elapsed time: 3027 ns in 100 times 
+hough_lines elapsed time: 3062 ns in 100 times 
+hough_lines elapsed time: 3038 ns in 100 times 
+hough_lines elapsed time: 3079 ns in 100 times 
+hough_lines elapsed time: 3040 ns in 100 times 
+hough_lines elapsed time: 3027 ns in 100 times 
+hough_lines elapsed time: 3032 ns in 100 times 
+hough_lines elapsed time: 3026 ns in 100 times 
+hough_lines elapsed time: 3021 ns in 100 times 
+hough_lines elapsed time: 3023 ns in 100 times 
+hough_lines elapsed time: 3021 ns in 100 times 
+hough_lines elapsed time: 3055 ns in 100 times 
+hough_lines elapsed time: 3138 ns in 100 times 
+hough_lines elapsed time: 3164 ns in 100 times 
+hough_lines elapsed time: 3055 ns in 100 times 
+hough_lines elapsed time: 3031 ns in 100 times 
+hough_lines elapsed time: 3034 ns in 100 times 
+hough_lines elapsed time: 3032 ns in 100 times 
+hough_lines elapsed time: 3022 ns in 100 times 
+hough_lines elapsed time: 3023 ns in 100 times 
+hough_lines elapsed time: 3033 ns in 100 times 
+hough_lines elapsed time: 3036 ns in 100 times 
+hough_lines elapsed time: 3026 ns in 100 times 
+hough_lines elapsed time: 3031 ns in 100 times 
+hough_lines elapsed time: 3030 ns in 100 times 
+hough_lines elapsed time: 3029 ns in 100 times 
+hough_lines elapsed time: 3022 ns in 100 times 
+hough_lines elapsed time: 3021 ns in 100 times 
+hough_lines elapsed time: 3030 ns in 100 times 
+hough_lines elapsed time: 3033 ns in 100 times 
+hough_lines elapsed time: 3027 ns in 100 times 
+hough_lines elapsed time: 3027 ns in 100 times 
+hough_lines elapsed time: 3030 ns in 100 times 
+<face_detection>
+Detecting face(s) in ../data/obama.jpg
+detection time = 19.9998ms
+face_detection elapsed time: 96719 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 16.8455ms
+face_detection elapsed time: 96398 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 18.7765ms
+face_detection elapsed time: 96651 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 20.2623ms
+face_detection elapsed time: 86373 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 18.1438ms
+face_detection elapsed time: 93184 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 15.0315ms
+face_detection elapsed time: 99706 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 18.7791ms
+face_detection elapsed time: 114122 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 16.6661ms
+face_detection elapsed time: 98280 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 18.3569ms
+face_detection elapsed time: 99404 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 15.8621ms
+face_detection elapsed time: 95047 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 16.5819ms
+face_detection elapsed time: 97838 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 17.1223ms
+face_detection elapsed time: 107945 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 16.0322ms
+face_detection elapsed time: 101752 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 17.3516ms
+face_detection elapsed time: 108630 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 20.601ms
+face_detection elapsed time: 112536 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 15.5275ms
+face_detection elapsed time: 95695 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 19.5259ms
+face_detection elapsed time: 97678 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 16.8202ms
+face_detection elapsed time: 99929 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 14.8752ms
+face_detection elapsed time: 96611 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 15.6689ms
+face_detection elapsed time: 102289 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 15.9133ms
+face_detection elapsed time: 97263 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 19.4326ms
+face_detection elapsed time: 105527 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 16.5999ms
+face_detection elapsed time: 98146 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 17.9613ms
+face_detection elapsed time: 97196 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 16.8707ms
+face_detection elapsed time: 96832 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 13.9784ms
+face_detection elapsed time: 95307 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 14.0335ms
+face_detection elapsed time: 94746 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 13.7799ms
+face_detection elapsed time: 94280 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 15.641ms
+face_detection elapsed time: 100819 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 13.9506ms
+face_detection elapsed time: 95838 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 18.5644ms
+face_detection elapsed time: 100342 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 17.0308ms
+face_detection elapsed time: 89147 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 18.3397ms
+face_detection elapsed time: 93240 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 18.0551ms
+face_detection elapsed time: 97363 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 16.833ms
+face_detection elapsed time: 98589 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 22.3059ms
+face_detection elapsed time: 98425 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 16.8249ms
+face_detection elapsed time: 106441 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 13.739ms
+face_detection elapsed time: 88930 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 16.4055ms
+face_detection elapsed time: 103306 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 17.8637ms
+face_detection elapsed time: 100895 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 13.7124ms
+face_detection elapsed time: 95024 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 17.89ms
+face_detection elapsed time: 97611 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 16.6102ms
+face_detection elapsed time: 93048 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 19.9179ms
+face_detection elapsed time: 98116 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 17.802ms
+face_detection elapsed time: 102076 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 13.9994ms
+face_detection elapsed time: 88228 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 22.2293ms
+face_detection elapsed time: 102161 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 17.1931ms
+face_detection elapsed time: 97366 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 16.6717ms
+face_detection elapsed time: 96230 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 14.0995ms
+face_detection elapsed time: 95741 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 16.794ms
+face_detection elapsed time: 96780 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 18.7308ms
+face_detection elapsed time: 98589 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 17.2169ms
+face_detection elapsed time: 94304 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 18.0816ms
+face_detection elapsed time: 97693 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 17.3128ms
+face_detection elapsed time: 95648 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 15.5964ms
+face_detection elapsed time: 94738 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 15.6966ms
+face_detection elapsed time: 96518 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 22.2403ms
+face_detection elapsed time: 99430 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 18.6571ms
+face_detection elapsed time: 104128 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 17.7999ms
+face_detection elapsed time: 100260 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 16.959ms
+face_detection elapsed time: 97151 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 19.5789ms
+face_detection elapsed time: 100092 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 18.8399ms
+face_detection elapsed time: 100453 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 14.601ms
+face_detection elapsed time: 96669 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 16.4777ms
+face_detection elapsed time: 96746 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 17.0074ms
+face_detection elapsed time: 96506 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 18.2241ms
+face_detection elapsed time: 102496 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 18.3202ms
+face_detection elapsed time: 101307 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 20.5126ms
+face_detection elapsed time: 98852 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 17.2295ms
+face_detection elapsed time: 98216 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 17.7839ms
+face_detection elapsed time: 99137 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 16.6597ms
+face_detection elapsed time: 101110 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 18.8832ms
+face_detection elapsed time: 105108 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 17.1375ms
+face_detection elapsed time: 100227 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 14.1214ms
+face_detection elapsed time: 96892 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 17.0622ms
+face_detection elapsed time: 95422 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 18.8464ms
+face_detection elapsed time: 104479 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 17.9066ms
+face_detection elapsed time: 101800 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 19.1237ms
+face_detection elapsed time: 100766 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 18.7654ms
+face_detection elapsed time: 100708 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 17.5639ms
+face_detection elapsed time: 95943 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 17.635ms
+face_detection elapsed time: 98901 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 14.7246ms
+face_detection elapsed time: 89773 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 20.5176ms
+face_detection elapsed time: 103325 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 16.8361ms
+face_detection elapsed time: 100292 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 17.6387ms
+face_detection elapsed time: 99915 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 16.9675ms
+face_detection elapsed time: 96947 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 15.2441ms
+face_detection elapsed time: 93894 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 15.4486ms
+face_detection elapsed time: 94466 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 18.6874ms
+face_detection elapsed time: 102293 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 17.0747ms
+face_detection elapsed time: 104120 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 18.7751ms
+face_detection elapsed time: 104880 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 21.0831ms
+face_detection elapsed time: 103878 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 19.8187ms
+face_detection elapsed time: 110475 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 17.5659ms
+face_detection elapsed time: 98742 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 16.2141ms
+face_detection elapsed time: 96714 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 16.8891ms
+face_detection elapsed time: 94995 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 18.2772ms
+face_detection elapsed time: 100079 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 17.0375ms
+face_detection elapsed time: 96580 ns in 100 times 
+Detecting face(s) in ../data/obama.jpg
+detection time = 16.4881ms
+face_detection elapsed time: 97428 ns in 100 times 
+	Using OpenCV version 3.1.0-dev
+
+	Using OpenCV MAJOR 3
+
+	Using OpenCV MINOR 1
+
