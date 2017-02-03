@@ -3,6 +3,7 @@
 //#include <opencv2/highgui/highgui.hpp>
 #include <iostream>
 #include <ctime>
+#include <fstream>
 
 using namespace cv;
 using namespace std;
@@ -81,22 +82,48 @@ std::clock_t face_detection(String filename, int counter = 100)
     return end;
 }
 
-int main( int argc, char** argv )
-{
-    if( argc <= 2)
-    {
+//Write to file:
+int write_file () {
+  ofstream myfile;
+  myfile.open ("example.txt");
+  myfile << "Writing this to a file.\n";
+  myfile.close();
+  return 0;
+}
+
+//Help:
+void help(String filename ){
+
         cout <<" Usage: <command_name> <filename.jog>" << endl;
         cout <<" Usage: <display_image>" << endl;
         cout <<" Usage: <hough_lines>" << endl;
         cout <<" Usage: <face_detection>" << endl;
-        return 0;
+        cout <<" Usage: <version>" << endl;
+        cout << filename << endl;
+        return;
+
+}
+//Main:
+int main( int argc, char** argv )
+{
+    try{
+    cv::CommandLineParser parser(argc, argv, "{help h||}");
+    parser.about("OpenCv Tests v1.0.0");
+    cv::String filename;
+    filename = { "{ filename h| |}" };
+    int times = parser.get<int>("t");
+    if (parser.has("help"))
+    {
+            help(filename);
+            return 0;
     }
 
     String command = argv[1];
-    String filename = argv[2];
+
+    //String filename = argv[2];
     int counter = NULL;
     if(argv[3]!=NULL){
-        counter = atoi(argv[3]);
+        counter = times;
     }
     clock_t elapsed_time = NULL;
 
@@ -113,10 +140,14 @@ int main( int argc, char** argv )
             cout <<"<face_detection>" << endl;
             elapsed_time = face_detection(filename, counter);
     }
+    if(command.compare("version") == 0 ){
+        cout << "\tUsing OpenCV version " << CV_VERSION << "\n" << endl;
+    }
     if(command.size() == 0 ){
         cout << command << " command not found" << endl;
         return 0;
     }
+
     if(counter != NULL){
         std::cout << command << " elapsed time: " << elapsed_time << " ns in" << counter << " times "<< std::endl;
     }
@@ -124,6 +155,11 @@ int main( int argc, char** argv )
         std::cout << command << " elapsed time: " << elapsed_time << " ns in 100 times" << std::endl;
     }
 
+    }
+    catch (int e)
+     {
+        cout << "An exception occurred. Exception Nr. " << e << '\n';
+     }
     return 0;
 }
 

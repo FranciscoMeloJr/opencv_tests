@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/frank/Desktop/Research/OpenCV test/OpenCVTests"
+CMAKE_SOURCE_DIR = "/home/frank/Desktop/Research/OpenCV test/tests"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/frank/Desktop/Research/OpenCV test/OpenCVTests"
+CMAKE_BINARY_DIR = "/home/frank/Desktop/Research/OpenCV test/tests"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/OpenCvProject.dir/depend.make
@@ -51,17 +51,17 @@ include CMakeFiles/OpenCvProject.dir/flags.make
 
 CMakeFiles/OpenCvProject.dir/opencv-test.cpp.o: CMakeFiles/OpenCvProject.dir/flags.make
 CMakeFiles/OpenCvProject.dir/opencv-test.cpp.o: opencv-test.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/home/frank/Desktop/Research/OpenCV test/OpenCVTests/CMakeFiles" $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/home/frank/Desktop/Research/OpenCV test/tests/CMakeFiles" $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/OpenCvProject.dir/opencv-test.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/OpenCvProject.dir/opencv-test.cpp.o -c "/home/frank/Desktop/Research/OpenCV test/OpenCVTests/opencv-test.cpp"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/OpenCvProject.dir/opencv-test.cpp.o -c "/home/frank/Desktop/Research/OpenCV test/tests/opencv-test.cpp"
 
 CMakeFiles/OpenCvProject.dir/opencv-test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenCvProject.dir/opencv-test.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/home/frank/Desktop/Research/OpenCV test/OpenCVTests/opencv-test.cpp" > CMakeFiles/OpenCvProject.dir/opencv-test.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/home/frank/Desktop/Research/OpenCV test/tests/opencv-test.cpp" > CMakeFiles/OpenCvProject.dir/opencv-test.cpp.i
 
 CMakeFiles/OpenCvProject.dir/opencv-test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenCvProject.dir/opencv-test.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/home/frank/Desktop/Research/OpenCV test/OpenCVTests/opencv-test.cpp" -o CMakeFiles/OpenCvProject.dir/opencv-test.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/home/frank/Desktop/Research/OpenCV test/tests/opencv-test.cpp" -o CMakeFiles/OpenCvProject.dir/opencv-test.cpp.s
 
 CMakeFiles/OpenCvProject.dir/opencv-test.cpp.o.requires:
 .PHONY : CMakeFiles/OpenCvProject.dir/opencv-test.cpp.o.requires
@@ -113,6 +113,6 @@ CMakeFiles/OpenCvProject.dir/clean:
 .PHONY : CMakeFiles/OpenCvProject.dir/clean
 
 CMakeFiles/OpenCvProject.dir/depend:
-	cd "/home/frank/Desktop/Research/OpenCV test/OpenCVTests" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/frank/Desktop/Research/OpenCV test/OpenCVTests" "/home/frank/Desktop/Research/OpenCV test/OpenCVTests" "/home/frank/Desktop/Research/OpenCV test/OpenCVTests" "/home/frank/Desktop/Research/OpenCV test/OpenCVTests" "/home/frank/Desktop/Research/OpenCV test/OpenCVTests/CMakeFiles/OpenCvProject.dir/DependInfo.cmake" --color=$(COLOR)
+	cd "/home/frank/Desktop/Research/OpenCV test/tests" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/frank/Desktop/Research/OpenCV test/tests" "/home/frank/Desktop/Research/OpenCV test/tests" "/home/frank/Desktop/Research/OpenCV test/tests" "/home/frank/Desktop/Research/OpenCV test/tests" "/home/frank/Desktop/Research/OpenCV test/tests/CMakeFiles/OpenCvProject.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/OpenCvProject.dir/depend
 

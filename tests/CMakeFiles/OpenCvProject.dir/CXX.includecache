@@ -6,12 +6,14 @@
 
 #IncludeRegexTransform: 
 
-/home/frank/Desktop/Research/OpenCV test/OpenCVTests/opencv-test.cpp
+/home/frank/Desktop/Research/OpenCV test/tests/opencv-test.cpp
 /home/frank/Desktop/opencv/include/opencv2/opencv.hpp
 -
 iostream
 -
 ctime
+-
+fstream
 -
 
 /home/frank/Desktop/opencv/include/opencv2/opencv.hpp
