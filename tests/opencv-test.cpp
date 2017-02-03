@@ -57,7 +57,53 @@ std::clock_t houghlines(String filename, int counter = 100)
     acc/=counter;
     return acc;
 }
+//Help:
+void help(){
 
+        cout <<" Help " << endl;
+        cout <<" Usage: <command_name> <filename.jog>" << endl;
+        cout <<" Usage: <display_image>" << endl;
+        cout <<" Usage: <hough_lines>" << endl;
+        cout <<" Usage: <face_detection>" << endl;
+        cout <<" Usage: <version>" << endl;
+        return;
+
+}
+//Detect and Draw:
+double detectFace( Mat& img, CascadeClassifier& cascade,
+                    double scale )
+{
+    double t = 0;
+    vector<Rect> faces, faces2;
+    const static Scalar colors[] =
+    {
+        Scalar(255,0,0),
+        Scalar(255,128,0),
+        Scalar(255,255,0),
+        Scalar(0,255,0),
+        Scalar(0,128,255),
+        Scalar(0,255,255),
+        Scalar(0,0,255),
+        Scalar(255,0,255)
+    };
+    Mat gray, smallImg;
+
+    cvtColor( img, gray, COLOR_BGR2GRAY );
+    double fx = 1 / scale;
+    resize( gray, smallImg, Size(), fx, fx, INTER_LINEAR );
+    equalizeHist( smallImg, smallImg );
+
+    t = (double)getTickCount();
+    cascade.detectMultiScale( smallImg, faces,
+        1.1, 2, 0
+        //|CASCADE_FIND_BIGGEST_OBJECT
+        //|CASCADE_DO_ROUGH_SEARCH
+        |CASCADE_SCALE_IMAGE,
+        Size(30, 30) );
+    t = (double)getTickCount() - t;
+    cout << "detection time = %g ms\n", t*1000/getTickFrequency();
+    return t;
+}
 //Face Detection:
 std::clock_t face_detection(String filename, int counter = 100)
 {
@@ -72,17 +118,23 @@ std::clock_t face_detection(String filename, int counter = 100)
     Canny(src, dst, 50, 200, 3);
     cvtColor(dst, cdst, COLOR_GRAY2BGR);
 
-    vector<Vec4i> lines;
+    CascadeClassifier cascade;
+    string cascadeName = "../../data/haarcascades/haarcascade_frontalface_alt.xml";
+
+    double scale = 1;
     clock_t start = std::clock();
+    if( !cascade.load( cascadeName ) )
+    {
+        cerr << "ERROR: Could not load classifier cascade" << endl;
+        help();
+        return -1;
+    }
+    cout << "Detecting face(s) in " << filename << endl;
+    if( !src.empty() )
+    {
+        detectFace( src, cascade, scale );
+    }
 
-    /*cout << "Detecting face(s) in " << inputName << endl;
-            if( !image.empty() )
-            {
-                detectAndDraw( image, cascade, nestedCascade, scale, tryflip );
-                waitKey(0);
-            }
-
-    */
     clock_t end = (std::clock() - start);
     return end;
 }
@@ -96,18 +148,6 @@ int write_file (String content) {
   return 0;
 }
 
-//Help:
-void help(){
-
-        cout <<" Help " << endl;
-        cout <<" Usage: <command_name> <filename.jog>" << endl;
-        cout <<" Usage: <display_image>" << endl;
-        cout <<" Usage: <hough_lines>" << endl;
-        cout <<" Usage: <face_detection>" << endl;
-        cout <<" Usage: <version>" << endl;
-        return;
-
-}
 //Keys:
 const char* keys =
 {
