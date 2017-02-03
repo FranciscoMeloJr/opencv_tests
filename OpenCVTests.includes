@@ -31,3 +31,7 @@ ModifyImage/CMakeFiles/3.2.2/CompilerIdC
 ScanImages
 FaceDetection/CMakeFiles/3.2.2/CompilerIdCXX
 Houghlines/CMakeFiles
+tests/CMakeFiles/3.2.2/CompilerIdCXX
+tests/CMakeFiles
+tests/CMakeFiles/3.2.2/CompilerIdC
+tests

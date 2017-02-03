@@ -1,1 +1,0 @@
-/home/frank/Desktop/Research/OpenCV test/OpenCVTests/CMakeFiles/OpenCvProject.dir
