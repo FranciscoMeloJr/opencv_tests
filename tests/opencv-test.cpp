@@ -59,6 +59,7 @@ void help(){
         cout <<" Usage: <hough_lines>" << endl;
         cout <<" Usage: <face_detection>" << endl;
         cout <<" Usage: <version>" << endl;
+        cout <<" All tests: -t " << endl;
         return;
 
 }
@@ -243,7 +244,7 @@ static std::clock_t execute_command(string command = "version", String filename 
         std::string s = CV_VERSION;
         intro.append(s + "\n");
         std::string content = oss.str();
-        write_file( intro +" "+content, over);
+        write_file("<"+ command+">" + "\n" +intro +" "+content, over);
     }
     return elapsed_time;
 }
