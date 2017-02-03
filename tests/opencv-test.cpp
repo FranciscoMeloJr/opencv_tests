@@ -61,7 +61,7 @@ std::clock_t houghlines(String filename, int counter = 100)
 void help(){
 
         cout <<" Help " << endl;
-        cout <<" Usage: <command_name> <filename.jog>" << endl;
+        cout <<" Usage: <command_name> <filename.jpg>" << endl;
         cout <<" Usage: <display_image>" << endl;
         cout <<" Usage: <hough_lines>" << endl;
         cout <<" Usage: <face_detection>" << endl;
@@ -119,7 +119,7 @@ std::clock_t face_detection(String filename, int counter = 100)
     cvtColor(dst, cdst, COLOR_GRAY2BGR);
 
     CascadeClassifier cascade;
-    string cascadeName = "../../data/haarcascades/haarcascade_frontalface_alt.xml";
+    string cascadeName = "../data/haarcascades/haarcascade_frontalface_alt.xml";
 
     double scale = 1;
     clock_t start = std::clock();
@@ -151,11 +151,11 @@ int write_file (String content) {
 //Keys:
 const char* keys =
 {
-    "{help h||}{@command|version|command}{@image|../data/obama.jpg|input image file}{@counter n| 100 |number of times to run}{@output w| null |save to a file}"
+    "{help h||}{@command c |version|command}{@image i|../data/obama.jpg|input image file}{@counter n| 100 |number of times to run}{@output o| null |save to a file}"
 
 };
 //Select command:
-static std::clock_t execute_command(string command, String filename, int counter, String outputFile)
+static std::clock_t execute_command(string command = "version", String filename = "../data/obama.jpg", int counter = 100, bool output = false)
 {
     clock_t elapsed_time = NULL;
     if(command.compare("display_image") == 0 ){
@@ -164,6 +164,7 @@ static std::clock_t execute_command(string command, String filename, int counter
     }
     if(command.compare("hough_lines") == 0 ){
             cout <<"<hough_lines>" << endl;
+            cout << filename << endl;
             elapsed_time = houghlines(filename, counter);
     }
 
@@ -196,15 +197,18 @@ int main( int argc, char** argv )
             return 0;
         }
 
-        String inputCommand = parser.get<String>("@command");
-        String inputImage = parser.get<String>("@image");
-        int inputTimes = parser.get<int>("@counter");
-        String outputFile = parser.get<String>("@output");
+        String inputCommand = parser.get<String>(0);
+        String inputImage = parser.get<String>(1);
+        int inputTimes = parser.get<int>(2);
+        bool output = parser.get<bool>(3);
 
-        String command = inputCommand;
-
-        std::clock_t elapsed_time = execute_command(inputCommand,inputImage,inputTimes, outputFile);
-        std::cout << command << " elapsed time: " << elapsed_time << " ns in " << inputTimes << " times "<< std::endl;
+        if (!parser.check())
+        {
+                parser.printErrors();
+                return -1;
+        }
+        std::clock_t elapsed_time = execute_command(inputCommand,inputImage,inputTimes, output);
+        std::cout << inputCommand << " elapsed time: " << elapsed_time << " ns in " << inputTimes << " times "<< std::endl;
 
 
     }
