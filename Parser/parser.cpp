@@ -58,7 +58,7 @@ static void print_command(string command)
 }
 const char* keys =
 {
-    "{help h||}{@image|../data/obama.jpg|input image file}{@command|version|command }"
+    "{help h||}{@image|../data/obama.jpg|input image file}{@command|version|command to be executed}"
 };
 int main( int argc, const char** argv )
 {

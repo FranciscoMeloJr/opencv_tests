@@ -1,4 +1,4 @@
-#include "/home/frank/Desktop/opencv/include/opencv2/opencv.hpp"
+﻿#include "/home/frank/Desktop/opencv/include/opencv2/opencv.hpp"
 //#include <opencv2/core/core.hpp>
 //#include <opencv2/highgui/highgui.hpp>
 #include <iostream>
@@ -47,10 +47,15 @@ std::clock_t houghlines(String filename, int counter = 100)
     cvtColor(dst, cdst, COLOR_GRAY2BGR);
 
     vector<Vec4i> lines;
-    clock_t start = std::clock();
-    HoughLinesP(dst, lines, 1, CV_PI/180, 50, 50, 10 );
-    clock_t end = (std::clock() - start);
-    return end;
+    clock_t acc = 0;
+    for(int i = 0; i< counter; i++){
+        clock_t start = std::clock();
+        HoughLinesP(dst, lines, 1, CV_PI/180, 50, 50, 10 );
+        clock_t end = (std::clock() - start);
+        acc+=end;
+    }
+    acc/=counter;
+    return acc;
 }
 
 //Face Detection:
@@ -83,10 +88,10 @@ std::clock_t face_detection(String filename, int counter = 100)
 }
 
 //Write to file:
-int write_file () {
+int write_file (String content) {
   ofstream myfile;
-  myfile.open ("example.txt");
-  myfile << "Writing this to a file.\n";
+  myfile.open("outputfile.txt");
+  myfile << content;
   myfile.close();
   return 0;
 }
@@ -94,6 +99,7 @@ int write_file () {
 //Help:
 void help(){
 
+        cout <<" Help " << endl;
         cout <<" Usage: <command_name> <filename.jog>" << endl;
         cout <<" Usage: <display_image>" << endl;
         cout <<" Usage: <hough_lines>" << endl;
@@ -105,11 +111,11 @@ void help(){
 //Keys:
 const char* keys =
 {
-    "{help h||}{@command|version|command}{@image|../data/obama.jpg|input image file}{@counter n| 100 |number of times to run}"
+    "{help h||}{@command|version|command}{@image|../data/obama.jpg|input image file}{@counter n| 100 |number of times to run}{@output w| null |save to a file}"
 
 };
 //Select command:
-static std::clock_t execute_command(string command, String filename, int counter)
+static std::clock_t execute_command(string command, String filename, int counter, String outputFile)
 {
     clock_t elapsed_time = NULL;
     if(command.compare("display_image") == 0 ){
@@ -129,12 +135,13 @@ static std::clock_t execute_command(string command, String filename, int counter
         cout << "\tUsing OpenCV version " << CV_VERSION << "\n" << endl;
     }
     if(command.size() == 0 ){
-        cout << command << " command not found" << endl;
+        cout << command << " use a command or help" << endl;
         return 0;
     }
 
     return elapsed_time;
 }
+
 //Main:
 int main( int argc, char** argv )
 {
@@ -145,18 +152,18 @@ int main( int argc, char** argv )
 
         if (parser.has("help"))
         {
-                help();
-                return 0;
+            help();
+            return 0;
         }
 
-        String inputCommand = parser.get<String>(0);
-        String inputImage = parser.get<String>(1);
-        int inputTimes = parser.get<int>(2);
+        String inputCommand = parser.get<String>("@command");
+        String inputImage = parser.get<String>("@image");
+        int inputTimes = parser.get<int>("@counter");
+        String outputFile = parser.get<String>("@output");
 
         String command = inputCommand;
-        String filename = inputImage;
 
-        std::clock_t elapsed_time = execute_command(inputCommand,inputImage,inputTimes);
+        std::clock_t elapsed_time = execute_command(inputCommand,inputImage,inputTimes, outputFile);
         std::cout << command << " elapsed time: " << elapsed_time << " ns in " << inputTimes << " times "<< std::endl;
 
 
