@@ -8,6 +8,7 @@
 using namespace cv;
 using namespace std;
 
+const string commands[] = {"display_image", "hough_lines", "face_detection", "version"};
 
 //Display:
 std::clock_t display(String filename){
@@ -175,22 +176,29 @@ std::clock_t face_detection(String filename)
 }
 
 //Write to file:
-int write_file (String content) {
+int write_file (String content, bool overwrite) {
   ofstream myfile;
-  myfile.open("outputfile.txt");
+  if(overwrite){
+    myfile.open("outputfile.txt");
+    myfile << content;
+    myfile.close();
+    return 0;
+  }
+  //append:
+  myfile.open("outputfile.txt", std::ios_base::app);
   myfile << content;
-  myfile.close();
   return 0;
 }
 
 //Keys:
 const char* keys =
 {
-    "{help h||}{@command c |version|command}{@image i|../data/obama.jpg|input image file}{@counter n| 100 |number of times to run}{@output o| null |save to a file}"
+    "{help h||}{total t||}{@command c |version|command}{@image i|../data/obama.jpg|input image file}{@counter n| 100 |number of times to run}{@output o| null |save to a file}"
 
 };
+
 //Select command:
-static std::clock_t execute_command(string command = "version", String filename = "../data/obama.jpg", int counter = 100, bool output = false)
+static std::clock_t execute_command(string command = "version", String filename = "../data/obama.jpg", int counter = 100, bool output = false, bool over = true)
 {
     clock_t elapsed_time = NULL;
     std::ostringstream oss;
@@ -235,11 +243,26 @@ static std::clock_t execute_command(string command = "version", String filename 
         std::string s = CV_VERSION;
         intro.append(s + "\n");
         std::string content = oss.str();
-        write_file( intro +" "+content);
+        write_file( intro +" "+content, over);
     }
     return elapsed_time;
 }
+//Select command:
+static std::clock_t execute_command(string command = "version", bool over = true)
+{
+    return execute_command(command, "../data/obama.jpg",100, true, over);
+}
+//Run all the tests:
+int run_all() {
 
+  const string commands[] = {"display_image", "hough_lines", "face_detection", "version"};
+  int size = 4;
+  for (int i = 0; i < size ; i++)
+  {
+        execute_command(commands[i],false);
+  }
+  return 0;
+}
 //Main:
 int main( int argc, char** argv )
 {
@@ -251,6 +274,11 @@ int main( int argc, char** argv )
         if (parser.has("help"))
         {
             help();
+            return 0;
+        }
+        if (parser.has("total"))
+        {
+            run_all();
             return 0;
         }
 
