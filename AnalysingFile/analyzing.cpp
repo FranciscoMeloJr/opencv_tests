@@ -1,4 +1,3 @@
-#include <opencv2/opencv.hpp>
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -8,14 +7,11 @@
 #include<dirent.h>
 
 using namespace std;
-using namespace cv;
-
-const string commands[] = {"list", "read"};
 
 //Function to read the content of a file:
 void read(string filename = "default"){
   string line;
-  ifstream myfile ("../results/output.txt");
+  ifstream myfile ("../results/outputfile-30.txt");
   if (myfile.is_open())
   {
     while ( getline (myfile,line) )
@@ -40,27 +36,14 @@ void listFile(){
         closedir(pDIR);
     }
 }
-//Keys:
-const char* keys =
-{
-    "{help h||}"
-};
-//Help:
-void help(){
 
-        cout <<" Help " << endl;
-        cout <<" Usage: <read> <filename.jpg>" << endl;
-        cout <<" Usage: <list> <directory>" << endl;
-        cout <<" All tests: -t " << endl;
-        return;
-
-}
 //Select command:
 void execute_command(string command = "list")
 {
-    string filename = "../results/output30.txt";
+    string filename = "../results/outputfile-30.txt";
     string path = "../results";
 
+    cout << command;
     if(command.compare("read") == 0 ){
         read(filename);
     }
@@ -71,19 +54,11 @@ void execute_command(string command = "list")
 
 //Main:
 int main( int argc, char** argv ){
-    cv::CommandLineParser parser(argc, argv, keys);
-    parser.about("OpenCv Tests v1.0.0");
-    if (parser.has("help"))
-    {
-        help();
-        return 0;
-    }
-
-    string inputCommand = NULL;
-    inputCommand = parser.get<string>(0);
 
     try{
-        execute_command(inputCommand);
+        std::string str1(argv[1]);
+        execute_command(str1);
+
     }catch(int e){
 
     }
