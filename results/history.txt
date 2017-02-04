@@ -1,0 +1,1000 @@
+ 2318  ./batch.sh 
+ 2319  clear
+ 2320  ls
+ 2321  rm OpenCvProject 
+ 2322  ./batch.sh 
+ 2323  clear
+ 2324  ./batch.sh >> out.txt
+ 2325  vim batch.sh 
+ 2326  vim out.txt 
+ 2327  vim batch.sh 
+ 2328  ./batch.sh >> out.txt
+ 2329  vim batch.sh 
+ 2330  ./batch.sh >> out.txt
+ 2331  vim batch.sh 
+ 2332  ./batch.sh >> out.txt
+ 2333  clear
+ 2334  ls
+ 2335  vim batch.sh 
+ 2336  ./batch.sh >> out.txt
+ 2337  vim batch.sh 
+ 2338  ./batch.sh >> out.txt
+ 2339  vim batch.sh 
+ 2340  ./batch.sh >> out.txt
+ 2341  pwd
+ 2342  vim batch.sh 
+ 2343* 
+ 2344  ./batch.sh >> out.txt
+ 2345  clear
+ 2346  ls
+ 2347  vim opencv-test.cpp 
+ 2348  ./batch.sh >> out.txt
+ 2349  ./OpenCvProject 
+ 2350  ./OpenCvProject -t
+ 2351  clear
+ 2352  vim opencv-test.cpp 
+ 2353  clear
+ 2354  ls
+ 2355  OpenCvProject -version
+ 2356  OpenCvProject v
+ 2357  OpenCvProject version
+ 2358  ./OpenCvProject version
+ 2359  mv OpenCvProject OpenCvProject_3-1
+ 2360  clear
+ 2361  ls
+ 2362  ./batch.sh 
+ 2363  clear
+ 2364  ls
+ 2365  mv out.txt out_3-1.txt
+ 2366  ./batch.sh 
+ 2367  clear
+ 2368  ./batch.sh > out.txt
+ 2369  clear
+ 2370  ls
+ 2371  ./OpenCvProject
+ 2372  ./OpenCvProject_3-1 
+ 2373  clear
+ 2374  ls
+ 2375  rm OpenCvProject
+ 2376  rm out.txt 
+ 2377  ./batch.sh > out.txt
+ 2378  ls
+ 2379  ./OpenCvProject
+ 2380  clear
+ 2381  vim batch.sh 
+ 2382  ./batch.sh > out.txt
+ 2383  ls
+ 2384  ls -las
+ 2385  ./OpenCvProject
+ 2386  ./OpenCvProject_3-1 
+ 2387  ag CV_VERSION
+ 2388  clear
+ 2389  ls -las
+ 2390  ./batch.sh > out.txt
+ 2391  clear
+ 2392  ./OpenCvProject
+ 2393  ./batch.sh > out.txt
+ 2394  clear
+ 2395  ./OpenCvProject
+ 2396  clear
+ 2397  ls
+ 2398  cat Makefile 
+ 2399  clear
+ 2400  ls
+ 2401  clear
+ 2402  ls
+ 2403  rm CMakeCache.txt 
+ 2404  rm -r CMakeCache.txt CMakeFiles/ Makefile cmake_install.cmake 
+ 2405  ./batch.sh > out.txt
+ 2406  clear
+ 2407  ./OpenCvProject
+ 2408  cat /home/frank/Desktop/opencv/include/opencv2/opencv.hpp
+ 2409  cat /home/frank/Desktop/opencv/include/opencv2/opencv.hpp | grep version
+ 2410  cat /home/frank/Desktop/opencv/include/opencv2/opencv.hpp | grep VERSION
+ 2411  clear
+ 2412  ls
+ 2413  cat /home/frank/Desktop/opencv/modules/core/include/opencv2/core/version.hpp 
+ 2414  cat /home/frank/Desktop/opencv/modules/core/include/opencv2/core.hpp 
+ 2415  cat /home/frank/Desktop/opencv/modules/core/include/opencv2/core.hpp | grep version
+ 2416  ./batch.sh > out.txt
+ 2417  clear
+ 2418  ls
+ 2419  ./OpenCvProject
+ 2420  ls
+ 2421  rm OpenCvProject
+ 2422  clear
+ 2423  ls
+ 2424  clear
+ 2425  ls
+ 2426  ./batch.sh > out.txt
+ 2427  ./OpenCvProject
+ 2428  vim batch.sh 
+ 2429  ls
+ 2430  ./OpenCvProject_3-1 
+ 2431  ./OpenCvProject
+ 2432  clear
+ 2433  ls
+ 2434  ./batch.sh > out.txt
+ 2435  clear
+ 2436  ./OpenCvProject
+ 2437  clear
+ 2438  ls
+ 2439  cd
+ 2440  ~/libs/opencv-2.4.8
+ 2441  cd ~/libs/opencv-2.4.8
+ 2442  cd ~/libs/opencv-3.0.0/
+ 2443  clear
+ 2444  ls
+ 2445  cd release/
+ 2446  pwd
+ 2447  ls
+ 2448  cd installed/
+ 2449  pwd
+ 2450  cd
+ 2451  cd Desktop/
+ 2452  clear
+ 2453  ls
+ 2454  clear
+ 2455  ls
+ 2456  clear
+ 2457  cd Research/OpenCV\ test/
+ 2458  clear
+ 2459  cd tests/
+ 2460  clear
+ 2461  ls
+ 2462  vim Makefile 
+ 2463  Makefile -h
+ 2464  Makefile help
+ 2465  Makefile -help
+ 2466  make help
+ 2467  vim Makefile 
+ 2468  clear
+ 2469  ls
+ 2470  cat CMakeCache.txt 
+ 2471  vim CMakeCache.txt 
+ 2472  clear
+ 2473  ls
+ 2474  cd CMakeFiles/
+ 2475* 
+ 2476  cd 3.2.2/
+ 2477  ls
+ 2478  cd ..
+ 2479  ls
+ 2480  clear
+ 2481  ls
+ 2482  cd ..
+ 2483  ls
+ 2484  vim CMakeLists.txt 
+ 2485  ./batch.sh > out.txt
+ 2486  clear
+ 2487  ls
+ 2488  ./OpenCvProject
+ 2489  vim CMakeLists.txt 
+ 2490  ./batch.sh > out.txt
+ 2491  ./OpenCvProject
+ 2492  vim CMakeLists.txt 
+ 2493  clear
+ 2494  ls
+ 2495  cd 
+ 2496  ls
+ 2497  cd opencv/
+ 2498  cler
+ 2499  ls
+ 2500  clear
+ 2501  ls
+ 2502  cd opencv2411/
+ 2503  clear
+ 2504  ;ls
+ 2505  ls
+ 2506  clear
+ 2507  ls
+ 2508  mkdir release
+ 2509  cd release
+ 2510  pwd
+ 2511  cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/home/frank/opencv/opencv2411
+ 2512  cd
+ 2513  cd Desktop/opencv
+ 2514  clear
+ 2515  ls
+ 2516  pwd
+ 2517  git status
+ 2518  cmake /home/frank/Desktop/opencv
+ 2519  ls
+ 2520  rm -r release/
+ 2521  clear
+ 2522  ls
+ 2523  mkdir release
+ 2524  cd release
+ 2525  cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=//home/frank/opencv/opencv2411
+ 2526  cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/home/frank/opencv/opencv2411
+ 2527  cd /home/frank/opencv/opencv2411
+ 2528  cd 
+ 2529  cd Desktop/opencv/release/
+ 2530  clear
+ 2531  pwd
+ 2532  cd..
+ 2533  cd ..
+ 2534  git status
+ 2535  clear
+ 2536  git status
+ 2537  clear
+ 2538  ls
+ 2539  git tags -l
+ 2540  git tag -l
+ 2541  git checkout tags/2.4.9
+ 2542  tig
+ 2543  git checkout tags/3.0.0
+ 2544  tig
+ 2545  git status
+ 2546  :q
+ 2547  clear
+ 2548  ls
+ 2549  git status
+ 2550  clear
+ 2551  mkdir build-3.0.0
+ 2552  cd build-3.0.0/
+ 2553  clear
+ 2554  ls
+ 2555  cmake ../
+ 2556  make
+ 2557  clear
+ 2558  ls
+ 2559  cd ..
+ 2560  ls
+ 2561  cat CMakeLists.txt 
+ 2562  :q
+ 2563  clear
+ 2564  ls
+ 2565  clear
+ 2566  ls
+ 2567  rm -r build-3.0.0/
+ 2568  clear
+ 2569  ls
+ 2570  rm -r release/
+ 2571  cler
+ 2572  clear
+ 2573  ls
+ 2574  pwd
+ 2575  mkdir build-3.0.0
+ 2576  cd build-3.0.0/
+ 2577  clear
+ 2578  ls
+ 2579  cmake ../
+ 2580  cd ..
+ 2581  clear
+ 2582  ls
+ 2583  mkdir release
+ 2584  rm -r release/
+ 2585  cd build-3.0.0/
+ 2586  ls
+ 2587  cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/home/frank/opencv/v3.0.0 ..
+ 2588  ls
+ 2589  clear
+ 2590  cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/home/frank/opencv/v3.0.0
+ 2591  cmake -DCMAKE_BUILD_TYPE=RELEASE -DCMAKE_INSTALL_PREFIX=/home/frank/opencv/v3.0.0 ..
+ 2592  ls
+ 2593  clear
+ 2594  ls
+ 2595  cd ..
+ 2596  ls
+ 2597  cmake .
+ 2598  ls
+ 2599  make
+ 2600  cd build-3.0.0/
+ 2601  cmake ../
+ 2602  cmake --help
+ 2603  vim ../CMakeLists.txt 
+ 2604  cd ..\
+ 2605  cd ..
+ 2606  mv build-3.0.0/ ../
+ 2607  ls
+ 2608  cd ..
+ 2609  ls
+ 2610  cd build-3.0.0/
+ 2611  cmake ../opencv
+ 2612  ls
+ 2613  cd ..
+ 2614  ls
+ 2615  cd opencv
+ 2616  ls
+ 2617  make
+ 2618  make -j8
+ 2619  make install
+ 2620  clear
+ 2621  ls
+ 2622  cd 
+ 2623  cd Desktop/Research/OpenCV\ test/te
+ 2624  cd Desktop/Research/OpenCV\ test/tests/
+ 2625  clear
+ 2626  ls
+ 2627  rm OpenCvProject
+ 2628  clear
+ 2629  ls
+ 2630  vim CMakeLists.txt 
+ 2631  ./batch.sh 
+ 2632  vim ./batch.sh 
+ 2633  make clean
+ 2634  ls
+ 2635  vim CMakeLists.txt 
+ 2636  clear
+ 2637  ls
+ 2638  make clean
+ 2639  ls
+ 2640  mdkir build
+ 2641  mkdir build
+ 2642  cd build/
+ 2643  clear
+ 2644  ls
+ 2645  cmake ../
+ 2646  make
+ 2647  ls
+ 2648  cmake --v
+ 2649  cmake -v
+ 2650  cmake --version
+ 2651  cd ..
+ 2652  ls
+ 2653  make
+ 2654  clear
+ 2655  ls
+ 2656  ldd OpenCvProject_3-1
+ 2657  ldd OpenCvProject_3-1 | grep opencv
+ 2658  q
+ 2659  vim ./batch.sh 
+ 2660  ls
+ 2661  vim CMakeLists.txt 
+ 2662  cmake .
+ 2663  make
+ 2664  make clean
+ 2665  ls
+ 2666  vim batch.sh 
+ 2667  rm -r CMakeCache.txt CMakeFiles/ Makefile cmake_install.cmake
+ 2668  clear
+ 2669  ls
+ 2670  cd build/
+ 2671  cmake ../
+ 2672  ls
+ 2673  cd ..
+ 2674  ls
+ 2675  cd build/
+ 2676  ls
+ 2677  make
+ 2678  ls
+ 2679  vim cmake_install.cmake 
+ 2680  ls
+ 2681  vim Makefile 
+ 2682  cd ..
+ 2683  ls
+ 2684  cd build/
+ 2685  rm -r ./*
+ 2686  cd ..
+ 2687  ls
+ 2688  vim CMakeLists.txt 
+ 2689  cd build/
+ 2690  cmake ../
+ 2691  make
+ 2692  clear
+ 2693  ls
+ 2694  ./OpenCvProject 
+ 2695  cd ..
+ 2696  ls
+ 2697  cd build/
+ 2698  p;s
+ 2699  ls
+ 2700  rm -r ./*
+ 2701  ls
+ 2702  cd ..
+ 2703  ls
+ 2704  vim CMakeLists.txt 
+ 2705  clear
+ 2706  ls
+ 2707  vim opencv-test.cpp 
+ 2708  cd ..
+ 2709  ls
+ 2710  cd -
+ 2711  cd build/
+ 2712  ls
+ 2713  cmake ../
+ 2714  make
+ 2715  cd ..
+ 2716  ls
+ 2717  cd -
+ 2718  rm -rf ./*
+ 2719  cd ..
+ 2720  ls
+ 2721  vim CMakeLists.txt 
+ 2722  cd build/
+ 2723  cmake ../
+ 2724  vim CMakeLists.txt 
+ 2725  cd ..
+ 2726  vim CMakeLists.txt 
+ 2727  cd build/
+ 2728  cmake ../
+ 2729  make
+ 2730  make -n
+ 2731  ls
+ 2732  vim CMakeFiles/
+ 2733  ls
+ 2734  cd ..
+ 2735  ls
+ 2736  vim opencv-test.cpp 
+ 2737  gcc -I/home/frank/opencv/v3.0.0/include -L/home/frank/opencv/v3.0.0/lib -lopencv_core -lopencv_highgui
+ 2738  vim opencv-test.cpp 
+ 2739  gcc -o frankiboi -I/home/frank/opencv/v3.0.0/include -L/home/frank/opencv/v3.0.0/lib -lopencv_core -lopencv_highgui opencv-test.cpp 
+ 2740  ls
+ 2741  vim opencv-test.cpp 
+ 2742  ls
+ 2743  vim CMakeLists.txt 
+ 2744  cd ..
+ 2745  cd -
+ 2746  cd build/
+ 2747  cmake ../
+ 2748  make
+ 2749  ls
+ 2750  ldd FranciscoProject | error
+ 2751  ldd FranciscoProject | grep error
+ 2752  ldd FranciscoProject
+ 2753  q
+ 2754  cd ..
+ 2755  ;s
+ 2756  ls
+ 2757  gcc -o frankiboi -I/home/frank/opencv/v3.0.0/include -L/home/frank/opencv/v3.0.0/lib -lopencv_core -lopencv_highgui -lopencv_objdetect -lopencv_imgcodecs opencv-test.cpp 
+ 2758  gcc -o frankiboi -I/home/frank/opencv/v3.0.0/include -L/home/frank/opencv/v3.0.0/lib -lopencv_core -lopencv_highgui -lopencv_objdetect -lopencv_imgcodecs -lopencv_imgproc opencv-test.cpp 
+ 2759* 
+ 2760  ls
+ 2761  ./FranciscoProject 
+ 2762  cd ..
+ 2763  ls
+ 2764  ./OpenCvProject_3-1 
+ 2765  vim CMakeLists.txt 
+ 2766  vim build/CMakeFiles/FranciscoProject.dir/flags.make
+ 2767  vim build/CMakeFiles/FranciscoProject.dir/link.txt 
+ 2768  g++ -o frankiboi -I/home/frank/opencv/v3.0.0/include -L/home/frank/opencv/v3.0.0/lib -lopencv_core -lopencv_highgui -lopencv_objdetect -lopencv_imgcodecs -lopencv_imgproc opencv-test.cpp
+ 2769  vim build/CMakeFiles/FranciscoProject.dir/link.txt 
+ 2770  cp build/CMakeFiles/FranciscoProject.dir/link.txt ./build-franki.sh
+ 2771  ls
+ 2772  vim build-franki.sh 
+ 2773  chmod +x build-franki.sh 
+ 2774  ./build-franki.sh 
+ 2775  vim build-franki.sh 
+ 2776  ./build-franki.sh 
+ 2777  ls
+ 2778  vim build-franki.sh 
+ 2779  ./build-franki.sh 
+ 2780  ls
+ 2781  ./FranciscoProject 
+ 2782  ls
+ 2783  cat build-franki.sh 
+ 2784  clear
+ 2785  ls
+ 2786  make clean
+ 2787  ls
+ 2788  rm FranciscoProject 
+ 2789  clear
+ 2790  ls
+ 2791  ./build-franki.sh 
+ 2792  ./FranciscoProject 
+ 2793  ldd FranciscoProject 
+ 2794  vim ./build-franki.sh 
+ 2795  ./build-franki.sh 
+ 2796  ./FranciscoProject 
+ 2797  clear
+ 2798  ls
+ 2799  mv FranciscoProject FranciscoProject_3-1
+ 2800  clear
+ 2801  ls
+ 2802  FranciscoProject_3-1 -t
+ 2803  ./FranciscoProject_3-1 -t
+ 2804  clear
+ 2805  ls
+ 2806  cd ..
+ 2807  git status
+ 2808  git add .
+ 2809  git commit -m "script to compile version 3.0.0"
+ 2810  git push 
+ 2811  git push --set-upstream origin master
+ 2812  clear
+ 2813  git status
+ 2814  cd tests/
+ 2815  clear
+ 2816  ls
+ 2817  vim CMakeLists.txt 
+ 2818  cd build/
+ 2819  ls
+ 2820  ./FranciscoProject 
+ 2821  rm -rf ./*
+ 2822  clear
+ 2823  ls
+ 2824  cmake ../
+ 2825  make
+ 2826  clear
+ 2827  ls
+ 2828  ./FranciscoProject 
+ 2829  cd ..
+ 2830  ls
+ 2831  vim CMakeLists.txt 
+ 2832  clear
+ 2833  cd build/
+ 2834  cmake ../
+ 2835  make
+ 2836* 
+ 2837  clear
+ 2838  ls
+ 2839  cd ..
+ 2840  ls
+ 2841  cd ..
+ 2842  vim READ.me 
+ 2843  clear
+ 2844  ls
+ 2845  cd tests/
+ 2846  clear
+ 2847  ls
+ 2848  vim CMakeLists.txt 
+ 2849  cd build/
+ 2850  ls
+ 2851  clear
+ 2852  rm -rf ./*
+ 2853  cmake ../
+ 2854  make
+ 2855  ./FranciscoProject 
+ 2856  clear
+ 2857  ls
+ 2858  cd ..
+ 2859  ls
+ 2860  vim CMakeLists.txt 
+ 2861  cd build/
+ 2862  rm -rf ./*
+ 2863  cmake ../
+ 2864  make
+ 2865  ./FranciscoProject 
+ 2866  cd ..
+ 2867  clear
+ 2868  ls
+ 2869  vim CMakeLists.txt 
+ 2870  cd build/
+ 2871  rm -rf ./*
+ 2872  cmake ../
+ 2873  make
+ 2874  ./FranciscoProject 
+ 2875  cd ..
+ 2876  vim CMakeLists.txt 
+ 2877* 
+ 2878  clear
+ 2879  ls
+ 2880  rm -rf ./*
+ 2881  clear
+ 2882  ;ls
+ 2883  clear
+ 2884  ls
+ 2885  cmake ../
+ 2886  make
+ 2887  ./FranciscoProject 
+ 2888  clear
+ 2889  cd ..
+ 2890  vim CMakeLists.txt 
+ 2891  cd build/
+ 2892  clear
+ 2893  ls
+ 2894  rm -rf ./*
+ 2895  cmake ../
+ 2896  make
+ 2897  ./FranciscoProject 
+ 2898  cd ..
+ 2899  vim CMakeLists.txt 
+ 2900  cd build/
+ 2901  rm -rf ./*
+ 2902  cmake ../
+ 2903  make
+ 2904  clear
+ 2905  ./FranciscoProject 
+ 2906  cd ..
+ 2907  vim CMakeLists.txt 
+ 2908  cd buio
+ 2909  cd build/
+ 2910  clear
+ 2911  ls
+ 2912  rm -rf ./*
+ 2913  cd ..
+ 2914  clear
+ 2915  cd build/
+ 2916  clear
+ 2917  cmake ../
+ 2918  make
+ 2919* 
+ 2920  clear
+ 2921  cd ..
+ 2922  clear
+ 2923  ls
+ 2924  vim CMakeLists.txt 
+ 2925  cd build/
+ 2926  clear
+ 2927  rm -rf ./*
+ 2928  clear
+ 2929  cmake ../
+ 2930  make
+ 2931  clear
+ 2932  ls
+ 2933  ./FranciscoProject 
+ 2934  cd ..
+ 2935  clear
+ 2936  ls
+ 2937  clear
+ 2938  ls
+ 2939  ./FranciscoProject_3-1 
+ 2940  mv FranciscoProject_3-1 FranciscoProject_3-0 
+ 2941  clear
+ 2942  ls
+ 2943  clear
+ 2944  ckear
+ 2945  clear
+ 2946  ls
+ 2947  ./FranciscoProject_3-0 -t
+ 2948  clear
+ 2949  ls
+ 2950  cat out
+ 2951  cat out.txt 
+ 2952  :q
+ 2953  clear
+ 2954  ls
+ 2955  cat outputfile.txt 
+ 2956  clear
+ 2957  ls
+ 2958  rm out_3-1.txt 
+ 2959  clear
+ 2960  ls
+ 2961  cd ..
+ 2962  clear
+ 2963  ls
+ 2964  mkdir AnalysingFile
+ 2965  clear
+ 2966  cd AnalysingFile/
+ 2967  clear
+ 2968  ls
+ 2969  vim analyzing.cpp
+ 2970  clear
+ 2971  vim analyzing.cpp
+ 2972  clear
+ 2973  g++ analyzing.cpp analyzing
+ 2974  g++ -o analyzing analyzing
+ 2975  g++ -o analyzing analyzing.cpp 
+ 2976  clear
+ 2977  ls
+ 2978  cd ..
+ 2979  git status
+ 2980  git add .
+ 2981  git commit -m "analyzing"
+ 2982  git push --set-upstream origin master
+ 2983  clear
+ 2984  cd AnalysingFile/
+ 2985  clear
+ 2986  ls
+ 2987  ./analyzing 
+ 2988  cd ..
+ 2989  mkdir results
+ 2990  cd tests/
+ 2991  clear
+ 2992  l;s
+ 2993  ls
+ 2994  clear
+ 2995  ls
+ 2996  cp outputfile-30.txt ../results/
+ 2997  cp outputfile-31.txt ../results/
+ 2998  clear
+ 2999  cd ..
+ 3000  cd AnalysingFile/
+ 3001  clear
+ 3002  ls
+ 3003  ./analyzing 
+ 3004  g++ -o analyzing analyzing.cpp 
+ 3005  clear
+ 3006  g++ -o analyzing analyzing.cpp 
+ 3007  ./analyzing 
+ 3008  g++ -o analyzing analyzing.cpp 
+ 3009  ./analyzing 
+ 3010  cp ../DisplayImage/CMakeLists.txt 
+ 3011  cp ../DisplayImage/CMakeLists.txt ../AnalysingFile/
+ 3012  clear
+ 3013  ls
+ 3014  vim CMakeLists.txt 
+ 3015  mkdir build 
+ 3016  cd build/
+ 3017  cmake .
+ 3018  cmake ../
+ 3019  make
+ 3020  cmake clean
+ 3021  cmake ../
+ 3022  make
+ 3023  clear
+ 3024  ls
+ 3025  mv OpenCvProject Analyze
+ 3026  ./Analyze 
+ 3027  ./Analyze -h
+ 3028  ./Analyze -r
+ 3029  ./Analyze -read
+ 3030  ./Analyze -list
+ 3031  clear
+ 3032  ls
+ 3033  vim batch.sh
+ 3034  clear
+ 3035  ls
+ 3036  rm -r CMakeCache.txt CMakeFiles/ cmake_install.cmake Makefile 
+ 3037  clear
+ 3038  ls
+ 3039  rm Analyze 
+ 3040  cmake ../
+ 3041  make
+ 3042  clear
+ 3043  ls
+ 3044  rm -r CMakeCache.txt CMakeFiles/ cmake_install.cmake Makefile 
+ 3045  clear
+ 3046  ls
+ 3047  make ../
+ 3048  cmake ../
+ 3049  make
+ 3050  clear
+ 3051  ls
+ 3052  mv OpenCvProject Analyzing
+ 3053  cler
+ 3054  clear
+ 3055  ls
+ 3056  clear
+ 3057  ls
+ 3058  ./Analyzing 
+ 3059  ./Analyzing
+ 3060  ./Analyzing -h
+ 3061  ./Analyzing -read
+ 3062  cd
+ 3063  clear
+ 3064  cd ring-project/
+ 3065  clear
+ 3066  ls
+ 3067  cd -
+ 3068  ls
+ 3069  cd Desktop/Research/OpenCV\ test/
+ 3070  clear
+ 3071  ls
+ 3072  cd AnalysingFile/
+ 3073  clear
+ 3074  ls
+ 3075  cd build/
+ 3076  ls
+ 3077  cd ..
+ 3078  vim CMakeLists.txt 
+ 3079  cd build/
+ 3080  clear
+ 3081  l;s
+ 3082  ls
+ 3083  ./Analyzing 
+ 3084  ./Analyzing -rea
+ 3085  ./Analyzing -read
+ 3086  ./Analyzing read
+ 3087  ./Analyzing read fsa
+ 3088  clear
+ 3089  ls
+ 3090  ./Analyzing 
+ 3091  clear
+ 3092  ls
+ 3093  vim batch.sh 
+ 3094  ls
+ 3095  rm -r CMakeCache.txt cmake_install.cmake Makefile CMakeFiles/ Analyzing 
+ 3096  vim batch.sh 
+ 3097  cmake ../
+ 3098  make
+ 3099  vim batch.sh 
+ 3100  clear
+ 3101  ls
+ 3102  chmod +x batch.sh 
+ 3103  ./batch.sh 
+ 3104  clear
+ 3105  ./Analyzing 
+ 3106  ./Analyzing read
+ 3107  ./Analyzing -read
+ 3108  ./Analyzing -read fd
+ 3109  ./batch.sh 
+ 3110  clear
+ 3111  vim batch.sh 
+ 3112  clear
+ 3113  ls
+ 3114  ./batch.sh 
+ 3115  ./Analyzing ere
+ 3116  ./Analyzing read
+ 3117  ./Analyzing read fds
+ 3118  ./Analyzing -read fds
+ 3119  cd ..
+ 3120  cd tests/
+ 3121  clear
+ 3122  ls
+ 3123  ./OpenCvProject_3-1 
+ 3124  ./OpenCvProject_3-1 -t
+ 3125  clear
+ 3126  cd ..
+ 3127  cd AnalysingFile/
+ 3128  clear
+ 3129  ls
+ 3130  rm analyzing
+ 3131  clear
+ 3132  ls
+ 3133  cd build/
+ 3134  cler
+ 3135  clear
+ 3136  ls
+ 3137  ./Analyzing 
+ 3138  ./Analyzing fdsa 
+ 3139  ./Analyzing fdsa  fdsafd
+ 3140  ./Analyzing fdsa dsafd
+ 3141  ./batch.sh 
+ 3142  clear
+ 3143  ls
+ 3144  ./batch.sh 
+ 3145  ./Analyzing 
+ 3146  ./Analyzing fds 
+ 3147  ./batch.sh 
+ 3148  ./Analyzing 
+ 3149  ./Analyzing -file="file"
+ 3150  ./Analyzing file="file"
+ 3151  ./Analyzing -file=file
+ 3152  clear
+ 3153  ls
+ 3154  ./batch.sh 
+ 3155  ./Analyzing 
+ 3156  ./Analyzing -file
+ 3157  ./Analyzing -file="fds"
+ 3158  ./Analyzing -file=fds.txt
+ 3159  ./Analyzing file=fds.txt
+ 3160  ./Analyzing -f=fds.txt
+ 3161  cd ..
+ 3162  clear
+ 3163  ls
+ 3164  cd Parser/
+ 3165  clear
+ 3166  ls
+ 3167  vim parser.cpp 
+ 3168  cd ..
+ 3169  cd AnalysingFile/
+ 3170  clear
+ 3171  ls
+ 3172  vim analyzing.cpp
+ 3173  cd build/
+ 3174  ./batch.sh 
+ 3175  ./Analyzing -h
+ 3176  ./Analyzing test
+ 3177  ./Analyzing file
+ 3178  ./Analyzing read
+ 3179  cd ..
+ 3180  ls
+ 3181  cd ..
+ 3182  git status
+ 3183  git d .
+ 3184  git add /
+ 3185  git add .
+ 3186  git commit -m "analyzing"
+ 3187  git push --set-upstream origin master
+ 3188  clear
+ 3189  ls
+ 3190  cd AnalysingFile/
+ 3191  clear
+ 3192  ls
+ 3193  g++ -o analyzing analyzing.cpp 
+ 3194  ./analyzing 
+ 3195  ./analyzing fdsa
+ 3196  ./analyzing read
+ 3197  g++ -o analyzing analyzing.cpp 
+ 3198  ./analyzing read
+ 3199  g++ -o analyzing analyzing.cpp 
+ 3200  ./analyzing 
+ 3201  ./analyzing test
+ 3202  ./analyzing read
+ 3203  clear
+ 3204  cat ../results/outputfile-30.txt 
+ 3205  clear
+ 3206  ./analyzing read
+ 3207  g++ -o analyzing analyzing.cpp 
+ 3208  ./analyzing read
+ 3209  clear
+ 3210  cat ../results/outputfile-30.txt 
+ 3211  g++ -o analyzing analyzing.cpp 
+ 3212  ./analyzing 
+ 3213  ./analyzing read
+ 3214  cd ..
+ 3215  clear
+ 3216  git status
+ 3217  git add .
+ 3218  git commit -m "analyzing without cv"
+ 3219  git push --set-upstream origin master
+ 3220  clear
+ 3221  lks
+ 3222  ls
+ 3223  cd AnalysingFile/
+ 3224  clear
+ 3225  ls
+ 3226  g++ -std=c++11 -o analyzing analyzing.cpp 
+ 3227  clear
+ 3228  g++ -std=c++11 -o analyzing analyzing.cpp 
+ 3229  clear
+ 3230  g++ -std=c++11 -o analyzing analyzing.cpp 
+ 3231  clear
+ 3232  ./analyzing read
+ 3233  ./analyzing 
+ 3234  clear
+ 3235  ls
+ 3236  ./analyzing 
+ 3237  ./analyzing read
+ 3238  cat ../results/outputfile-31.txt 
+ 3239  clear
+ 3240  cat ../results/outputfile-30.txt 
+ 3241  clear
+ 3242  g++ -std=c++11 -o analyzing analyzing.cpp 
+ 3243  ./analyzing read
+ 3244  g++ -std=c++11 -o analyzing analyzing.cpp 
+ 3245  ./analyzing read
+ 3246  clear
+ 3247  ls
+ 3248  g++ -std=c++11 -o analyzing analyzing.cpp 
+ 3249  ./analyzing read
+ 3250  clear
+ 3251  cd ..
+ 3252  ls
+ 3253  cd results/
+ 3254  ls
+ 3255  cat results.csv 
+ 3256  clear
+ 3257  cd -
+ 3258  cd tests/
+ 3259  cd ..
+ 3260  cd AnalysingFile/
+ 3261  clear
+ 3262  ls
+ 3263  ./analyzing read
+ 3264  clear
+ 3265  cat ../results/results.csv 
+ 3266  clear
+ 3267  ./analyzing read
+ 3268  clear
+ 3269  cat ../results/results.csv c
+ 3270  clear
+ 3271  g++ -std=c++11 -o analyzing analyzing.cpp 
+ 3272  ./analyzing read
+ 3273  clear
+ 3274  cat ../results/results.csv c
+ 3275  cat ../results/outputfile-30.txt 
+ 3276  clear
+ 3277  cd ..
+ 3278  ls
+ 3279  cd results/
+ 3280  clear
+ 3281  ls
+ 3282  cat outputfile-30.txt 
+ 3283  :q
+ 3284  clear
+ 3285  cat outputfile-31.txt 
+ 3286  clear
+ 3287  cat results.csv 
+ 3288  clear
+ 3289  cd ..
+ 3290  cd AnalysingFile/
+ 3291  clear
+ 3292  ls
+ 3293  g++ -std=c++11 -o analyzing analyzing.cpp 
+ 3294  clear
+ 3295  ./analyzing read
+ 3296  clear
+ 3297  cat ../results/results.csv 
+ 3298  CLEAR
+ 3299  clear
+ 3300  ls
+ 3301  cat ../results/results.csv 
+ 3302  clear
+ 3303  g++ -std=c++11 -o analyzing analyzing.cpp 
+ 3304  ./analyzing read
+ 3305  clear
+ 3306  cd ..
+ 3307  cd results/
+ 3308  clear
+ 3309  ls
+ 3310  cat outputfile-31.txt 
+ 3311  clear
+ 3312  cat outputfile-30.txt 
+ 3313  :q
+ 3314  clear
+ 3315  history | FIx
+ 3316  history | grep FIX
+ 3317  history > history.txt
