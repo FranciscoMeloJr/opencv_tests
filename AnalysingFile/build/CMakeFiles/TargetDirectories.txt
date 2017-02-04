@@ -1,0 +1,1 @@
+/home/frank/Desktop/Research/OpenCV test/AnalysingFile/build/CMakeFiles/Analyzing.dir
