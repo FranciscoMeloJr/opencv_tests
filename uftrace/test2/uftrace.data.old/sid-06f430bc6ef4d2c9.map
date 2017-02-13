@@ -1,0 +1,55 @@
+00400000-00401000 r-xp 00000000 08:02 14289950                           /home/frank/Desktop/Research/OpenCV test/uftrace/test2/hello
+00600000-00601000 r--p 00000000 08:02 14289950                           /home/frank/Desktop/Research/OpenCV test/uftrace/test2/hello
+00601000-00602000 rw-p 00001000 08:02 14289950                           /home/frank/Desktop/Research/OpenCV test/uftrace/test2/hello
+00791000-007c3000 rw-p 00000000 00:00 0                                  [heap]
+7f1ce84d1000-7f1ce84e7000 r-xp 00000000 08:02 12063073                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f1ce84e7000-7f1ce86e6000 ---p 00016000 08:02 12063073                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f1ce86e6000-7f1ce86e7000 r--p 00015000 08:02 12063073                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f1ce86e7000-7f1ce86e8000 rw-p 00016000 08:02 12063073                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f1ce86e9000-7f1ce87f0000 r-xp 00000000 08:02 12059846                   /lib/x86_64-linux-gnu/libm-2.21.so
+7f1ce87f0000-7f1ce89ef000 ---p 00107000 08:02 12059846                   /lib/x86_64-linux-gnu/libm-2.21.so
+7f1ce89ef000-7f1ce89f0000 r--p 00106000 08:02 12059846                   /lib/x86_64-linux-gnu/libm-2.21.so
+7f1ce89f0000-7f1ce89f1000 rw-p 00107000 08:02 12059846                   /lib/x86_64-linux-gnu/libm-2.21.so
+7f1ce89f1000-7f1ce8a09000 r-xp 00000000 08:02 12059849                   /lib/x86_64-linux-gnu/libpthread-2.21.so
+7f1ce8a09000-7f1ce8c09000 ---p 00018000 08:02 12059849                   /lib/x86_64-linux-gnu/libpthread-2.21.so
+7f1ce8c09000-7f1ce8c0a000 r--p 00018000 08:02 12059849                   /lib/x86_64-linux-gnu/libpthread-2.21.so
+7f1ce8c0a000-7f1ce8c0b000 rw-p 00019000 08:02 12059849                   /lib/x86_64-linux-gnu/libpthread-2.21.so
+7f1ce8c0b000-7f1ce8c0f000 rw-p 00000000 00:00 0 
+7f1ce8c11000-7f1ce8d84000 r-xp 00000000 08:02 2630679                    /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21
+7f1ce8d84000-7f1ce8f83000 ---p 00173000 08:02 2630679                    /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21
+7f1ce8f83000-7f1ce8f8d000 r--p 00172000 08:02 2630679                    /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21
+7f1ce8f8d000-7f1ce8f8f000 rw-p 0017c000 08:02 2630679                    /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21
+7f1ce8f8f000-7f1ce8f93000 rw-p 00000000 00:00 0 
+7f1ce8f99000-7f1ce8f9c000 r-xp 00000000 08:02 12062937                   /lib/x86_64-linux-gnu/libdl-2.21.so
+7f1ce8f9c000-7f1ce919b000 ---p 00003000 08:02 12062937                   /lib/x86_64-linux-gnu/libdl-2.21.so
+7f1ce919b000-7f1ce919c000 r--p 00002000 08:02 12062937                   /lib/x86_64-linux-gnu/libdl-2.21.so
+7f1ce919c000-7f1ce919d000 rw-p 00003000 08:02 12062937                   /lib/x86_64-linux-gnu/libdl-2.21.so
+7f1ce91a1000-7f1ce91a8000 r-xp 00000000 08:02 12059843                   /lib/x86_64-linux-gnu/librt-2.21.so
+7f1ce91a8000-7f1ce93a7000 ---p 00007000 08:02 12059843                   /lib/x86_64-linux-gnu/librt-2.21.so
+7f1ce93a7000-7f1ce93a8000 r--p 00006000 08:02 12059843                   /lib/x86_64-linux-gnu/librt-2.21.so
+7f1ce93a8000-7f1ce93a9000 rw-p 00007000 08:02 12059843                   /lib/x86_64-linux-gnu/librt-2.21.so
+7f1ce93a9000-7f1ce93be000 r-xp 00000000 08:02 2629987                    /usr/lib/x86_64-linux-gnu/libelf-0.163.so
+7f1ce93be000-7f1ce95bd000 ---p 00015000 08:02 2629987                    /usr/lib/x86_64-linux-gnu/libelf-0.163.so
+7f1ce95bd000-7f1ce95be000 r--p 00014000 08:02 2629987                    /usr/lib/x86_64-linux-gnu/libelf-0.163.so
+7f1ce95be000-7f1ce95bf000 rw-p 00015000 08:02 2629987                    /usr/lib/x86_64-linux-gnu/libelf-0.163.so
+7f1ce95c1000-7f1ce9781000 r-xp 00000000 08:02 12062950                   /lib/x86_64-linux-gnu/libc-2.21.so
+7f1ce9781000-7f1ce9981000 ---p 001c0000 08:02 12062950                   /lib/x86_64-linux-gnu/libc-2.21.so
+7f1ce9981000-7f1ce9985000 r--p 001c0000 08:02 12062950                   /lib/x86_64-linux-gnu/libc-2.21.so
+7f1ce9985000-7f1ce9987000 rw-p 001c4000 08:02 12062950                   /lib/x86_64-linux-gnu/libc-2.21.so
+7f1ce9987000-7f1ce998b000 rw-p 00000000 00:00 0 
+7f1ce9991000-7f1ce99a6000 r-xp 00000000 08:02 3150922                    /usr/local/lib/libmcount-fast.so
+7f1ce99a6000-7f1ce9ba5000 ---p 00015000 08:02 3150922                    /usr/local/lib/libmcount-fast.so
+7f1ce9ba5000-7f1ce9ba6000 r--p 00014000 08:02 3150922                    /usr/local/lib/libmcount-fast.so
+7f1ce9ba6000-7f1ce9ba7000 rw-p 00015000 08:02 3150922                    /usr/local/lib/libmcount-fast.so
+7f1ce9ba7000-7f1ce9bac000 rw-p 00000000 00:00 0 
+7f1ce9bb1000-7f1ce9bd5000 r-xp 00000000 08:02 12062948                   /lib/x86_64-linux-gnu/ld-2.21.so
+7f1ce9d9f000-7f1ce9da1000 rw-p 00000000 00:00 0 
+7f1ce9dcc000-7f1ce9dd4000 rw-p 00000000 00:00 0 
+7f1ce9dd4000-7f1ce9dd5000 r--p 00023000 08:02 12062948                   /lib/x86_64-linux-gnu/ld-2.21.so
+7f1ce9dd5000-7f1ce9dd6000 rw-p 00024000 08:02 12062948                   /lib/x86_64-linux-gnu/ld-2.21.so
+7f1ce9dd6000-7f1ce9dd8000 rw-p 00000000 00:00 0 
+7fffc93ee000-7fffc940d000 rwxp 00000000 00:00 0                          [stack]
+7fffc940d000-7fffc940f000 rw-p 00000000 00:00 0 
+7fffc9521000-7fffc9523000 r--p 00000000 00:00 0                          [vvar]
+7fffc9523000-7fffc9525000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]

@@ -1,0 +1,2 @@
+SESS timestamp=1225771.790021671 pid=31270 sid=06f430bc6ef4d2c9 exename="/home/frank/Desktop/Research/OpenCV test/uftrace/test2/hello"
+TASK timestamp=1225771.790167417 tid=31270 pid=31270

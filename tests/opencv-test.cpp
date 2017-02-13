@@ -12,8 +12,7 @@ const string commands[] = {"display_image", "hough_lines", "face_detection", "ve
 
 //Display:
 std::clock_t display(String filename){
-    Mat image;
-    image = imread(filename, CV_LOAD_IMAGE_COLOR);   // Read the file
+    Mat image = imread(filename, CV_LOAD_IMAGE_COLOR);   // Read the file
 
     if(! image.data )                              // Check for invalid input
     {

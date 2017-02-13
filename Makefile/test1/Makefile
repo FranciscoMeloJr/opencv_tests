@@ -4,7 +4,8 @@ CPP = g++
 CPPFLAGS = -L/home/frank/opencv/v3.0.0 \
 	   -I/home/frank/opencv/include
 
-FLAGS += -finstrument-functions
+FLAGS += -pg
+#-finstrument-functions
 
 # Opencv 2.4.8
 #CPPFLAGS = -L/home/krystof/libs/opencv-2.4.8/release/installed/libs \

@@ -1,0 +1,8 @@
+SESS timestamp=1140797.075213340 pid=6958 sid=e2107b91e1684667 exename="/home/frank/Desktop/Research/OpenCV test/tests/FranciscoProject"
+TASK timestamp=1140797.075276663 tid=6958 pid=6958
+DLOP timestamp=1140797.075783551 tid=6958 sid=e2107b91e1684667 base=7f29d7f39000 libname="/usr/local/lib/liblttng-ust-tracepoint.so.0"
+DLOP timestamp=1140797.078587649 tid=6958 sid=e2107b91e1684667 base=0 libname="libOpenCL.so"
+TASK timestamp=1140797.121434419 tid=6964 pid=6958
+TASK timestamp=1140797.125328499 tid=6962 pid=6958
+TASK timestamp=1140797.127611425 tid=6963 pid=6958
+TASK timestamp=1140797.131376015 tid=6961 pid=6958
