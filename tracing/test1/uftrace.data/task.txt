@@ -1,0 +1,2 @@
+SESS timestamp=1139454.209169526 pid=6652 sid=f78dbfa8b640a93e exename="/home/frank/Desktop/Research/OpenCV test/Makefile/test1/make_test"
+TASK timestamp=1139454.209392825 tid=6652 pid=6652

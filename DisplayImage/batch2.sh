@@ -1,4 +1,5 @@
 #!/bin/bash
 
-./DisplayImage obama.jpg
+./DisplayImage obama.jpg 
+
 
