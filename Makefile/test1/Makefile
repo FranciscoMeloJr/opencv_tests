@@ -15,3 +15,6 @@ all: make_test
 
 make_test: main_make.cpp
 	$(CPP) $(CPPFLAGS) $(FLAGS) $^ -o $@
+
+clean:
+	-rm make_test
