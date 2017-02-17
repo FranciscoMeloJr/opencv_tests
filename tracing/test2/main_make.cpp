@@ -7,9 +7,10 @@
 #include <sys/types.h> /* for pid_t */
 #include <sys/wait.h> /* for wait */
 #include <ctime>
-
+#include <stdio.h>
 using namespace cv;
 using namespace std;
+
 
 int display(int argc, char ** argv){
 

@@ -1,12 +1,18 @@
 CXX ?= g++
-
-FLAGS = -finstrument-functions
+GCC = gcc
+FLAGS = -pg
+#-finstrument-functions
 CXXFLAGS += -c -Wall $(shell pkg-config --cflags opencv) $(FLAGS)
-LDFLAGS += $(shell pkg-config --libs --static opencv)
-all: opencv_example
+LDFLAGS += $(shell pkg-config --libs --static opencv) #-llttng-ust #-ldl
 
-opencv_example: main_make.o; $(CXX) $< -o $@ $(LDFLAGS) 
+all:
+	$(GCC) -c -o cyg.o cyg.c -I .
+	$(CXX) -o main_make.o main_make.cpp $(CXXFLAGS)
+	$(CXX) main_make.o -o opencv_example $(LDFLAGS)  #cyg.o -o opencv_example $(LDFLAGS) 
 
-%.o: %.cpp; $(CXX) $< -o $@ $(CXXFLAGS)
+clean: ; rm -f *.o opencv_example
 
-clean: ; rm -f main_make.o opencv_example
+
+
+
+
