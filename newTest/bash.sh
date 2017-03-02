@@ -1,52 +1,173 @@
 #!/bin/bash
 
-S1='800'
-S2='400'
-S3='700'
+function PF(){
+echo $1$2
+  for i in `seq 1 $1`
+  do
+     echo $i
+     tracePF $i $2
+  done
 
-function x {
-	
-	for i in `seq 1 $1`
-	do
-	      ./OpenCvProject $2
-	     echo " "
-	done
+}
+
+function CM(){
+echo $1
+  for i in `seq 1 $1`
+  do
+     traceCM $i $2
+  done
+}
+
+function INST(){
+echo $1
+  for i in `seq 1 $1`  
+  do
+     traceINST $i $2
+  done
+ 
+}
+
+function tracePF(){
+
+  a='output=/tmp/ust-traces-'
+  b=$2
+  c='-pf-'
+  d=$a$b$c
+  e=$d$1
+
+  lttng create $1 --$e
+  lttng enable-event -u -a
+  #./opencv_example 
+  lttng enable-event -u sched_switch
+  lttng add-context -u -t perf:thread:page-fault
+  #lttng add-context -u -t perf:thread:cache-misses 
+  #lttng add-context -u -t perf:thread:instructions 
+
+  lttng start
+
+  ./inline -$2 
+  lttng stop
+  lttng destroy
+}
+
+function traceCM (){
+
+  a='output=/tmp/ust-traces-'
+  b=$2
+  c='-cm-'
+  d=$a$b$c
+  e=$d$1
+
+  lttng create $1 --$e
+  lttng enable-event -u -a
+  #./opencv_example 
+  #lttng add-context -u -t perf:thread:page-fault
+  lttng enable-event -u sched_switch
+  lttng add-context -u -t perf:thread:cache-misses
+  #lttng add-context -u -t perf:thread:instructions 
+
+  lttng start
+
+  ./inline -$2
+  lttng stop
+  lttng destroy
+
+}
+
+function traceINST (){
+ 
+  a='output=/tmp/ust-traces-'
+  b=$2
+  c='-init'
+  d=$a$2$c
+  e=$d$1
+
+  lttng create $1 --$e
+  lttng enable-event -u -a
+  #./opencv_example 
+  #lttng add-context -u -t perf:thread:page-fault
+  #lttng add-context -u -t perf:thread:cache-misses 
+  lttng add-context -u -t perf:thread:instructions 
+
+  lttng start
+
+  ./inline -$2
+  lttng stop
+  lttng destroy
 
 };
 
-function y {         
-	echo $1
 
-	x 1000 $1 >> "$2"
+function par(){
 
-	echo "end"
-}
-if [[ "$1" ==  $S1 ]]; then
-	x 1000 ../data/800x800.png > ../results/test800.csv
-fi
-if [[ "$1" ==  $S2 ]]; then
-        x 1000 ../data/400x400.png > ../results/test400.csv
-fi
-if [[ "$1" ==  $S3 ]]; then
-        x 1000 ../data/700x700.png > ../results/test700.csv
-fi
+ echo $1
 
-if [[ "$1" ==  '1' ]]; then
-	p4="../results/testTotal.csv";
-       
-	v1="../data/700x700.png";
-        p2="../data/400x400.png";
-        p3="../data/800x800.png";
+};
 
-        y $v1 $p4;
-	sleep 1;
-	y $p2 $p4;
-	sleep 1;
-	y $p3 $p4;
-	sleep 1;
+function show(){
+
+ a='PF'
+ b='world'
+ c=$a$b;
+ par $c
+
+};
+
+echo $1
+if [ "$#" -eq 0 ];
+then
+   echo '-all for all tests';
 fi
 
+if [ "$1" = "-a" ];
+then 
+   echo 'All';
+   echo 'inline';
+
+   qtd=3
+   inline='i'
+
+   PF $qtd $inline
+   CM $qtd $inline
+   INST $qtd $inline 
+  
+   echo 'not inline';
+   inline='n'
+ 
+   PF $qtd $inline
+   CM $qtd $inline
+   INST $qtd $inline
+
+fi
 
 
+echo Enter quantity of tests:
+read qtd
+
+echo Enter the type:
+read type
+
+echo 'With or without inline (y = i / n = n)'
+read inline
+
+if [ $type = "P" ]; 
+then
+       PF $qtd $inline
+fi
+
+if [ $type = "C" ]; 
+then
+       CM $qtd $inline
+fi
+
+if [ $type = "I" ]; 
+then
+       INST $qtd $inline
+fi
+
+if [ $type = "S" ];
+then
+       show
+fi
 
 

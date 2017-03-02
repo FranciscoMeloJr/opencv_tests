@@ -5,6 +5,7 @@
 #include <sys/wait.h> /* for wait */
 #include <ctime>
 #include <iostream>
+#include "hello-tp.h" //for the tracing point
 
 static struct timespec ts_start, ts_end;
 #define tic(start) clock_gettime(CLOCK_MONOTONIC, &start)
@@ -33,7 +34,9 @@ int main( int argc, char** argv )
     if (pid==0) { /* child process */
 
                 static char *argv[]={"obama.jpg"};
+                tracepoint(hello_world, my_first_tracepoint, 23, "hi there!");
                 execv("DisplayImage3.0",argv);
+                tracepoint(hello_world, my_first_tracepoint, 23, "hi there!");
                 exit(127); /* only if execv fails */
     }
     else { /* pid!=0; parent process */
