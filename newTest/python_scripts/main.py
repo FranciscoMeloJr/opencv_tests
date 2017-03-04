@@ -19,7 +19,7 @@ def take_all_metrics(trace_path, print_flag, counters_list, case):
 #this function executes the program and takes its results as a list:
 def executeProgram(caseSelection, flag):
     case = caseSelection
-    tracePath = shell_scripts.execution(case)
+    tracePath = shell_scripts.execution(case, flag)
 
     # This module calls the reading module
     # trace_path1 = "/tmp/test1/data/500x500.jpg-pf-1/ust/uid/1000/64-bit"
@@ -50,24 +50,26 @@ def write(flag, listAllResults, case):
         if(flag):
             print(listAllResults)
 
-        if (len(listAllResults) > 1):
+        if (len(listAllResults) > 0):
             if (flag):
                 for eachList in listAllResults:
                     if(len(eachList) > 0):
                         list.append(eachList)
 
         writer_path = "../../python_results.csv"
-        csv_module.write_to_csv(writer_path, list)
+        csv_module.write_to_csv(writer_path, list, True)
 
-def all_exe(flag, list):
+def all_exe(flag, list, qtd):
     # This call the module to run the shell scripts:
 
-    i = 1
     j = 1
     listAllResults = []
     for eachElement in list:
         case = eachElement
-        while i < 10:
+        i = 0
+        if (flag):
+            print (case)
+        while i < qtd:
             j +=1
             listResults = executeProgram(case, flag)
             if(len(listResults)> 0):
@@ -78,8 +80,7 @@ def all_exe(flag, list):
     write(flag, listAllResults, case)
 
 def run(flag):
-    list = ["700", "600", "500"]
-    for each in list:
-        all_exe(flag, each)
+    list = [700, 600, 500]
+    all_exe(flag, list, 1000)
 
 run(True)
