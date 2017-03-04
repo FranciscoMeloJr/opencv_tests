@@ -9,29 +9,77 @@ import csv_module
 import sys
 
 #function to take all metrics:
-def take_all_metrics(trace_path, print_flag):
+def take_all_metrics(trace_path, print_flag, counters_list, case):
     extended_path = "/ust/uid/1000/64-bit"
     if extended_path not in trace_path:
         trace_path+=extended_path
 
-    counters_list = ["perf_thread_page_fault", "perf_thread_cache_misses", "perf_thread_instructions"]
-    return python_reader.readList(trace_path, counters_list, print_flag)
+    return python_reader.readList(trace_path, counters_list, print_flag, case)
 
+#this function executes the program and takes its results as a list:
+def executeProgram(caseSelection, flag):
+    case = caseSelection
+    tracePath = shell_scripts.execution(case)
 
+    # This module calls the reading module
+    # trace_path1 = "/tmp/test1/data/500x500.jpg-pf-1/ust/uid/1000/64-bit"
+    # trace_path2 = "/tmp/ust-traces--pf-9/ust/uid/1000/64-bit"
 
-#This call the module to run the shell scripts:
-trace_path = shell_scripts.execution()
+    listResults = []
+    if (tracePath is not -1):
+        print(tracePath)
+        print_flag = flag
+        # This module calls the reading module to read all the info:
+        counters_list = ["my_string_field", "my_integer_field","elapsed", "perf_thread_page_fault", "perf_thread_cache_misses", "perf_thread_instructions"]
+        listResults = take_all_metrics(tracePath, print_flag, counters_list, case)
 
-# This module calls the reading module
-trace_path1 = "/tmp/test1/data/500x500.jpg-pf-1/ust/uid/1000/64-bit"
-trace_path2 = "/tmp/ust-traces--pf-9/ust/uid/1000/64-bit"
+    else:
+        print("Error on the tracing")
 
-if(trace_path is not -1):
-    print (trace_path)
-    print_flag = False
-    ret = take_all_metrics(trace_path, print_flag)
-else:
-    print("Error on the tracing")
+    return listResults
 
-if(len(ret)> 1):
-    csv_module.write_to_csv("results.csv", ret)
+#this function writes to a csv file:
+def write(flag, listAllResults, case):
+    if (len(listAllResults) > 0):
+        list = []
+        data = case
+        metrics = ["workload","function", "version","elapsed time","perf_thread_page_fault", "perf_thread_cache_misses", "perf_thread_instructions"]
+        # first_line = ["workload:", "version", "perf_thread_page_fault", "perf_thread_cache_misses", "perf_thread_instructions"]
+        list.append(metrics)
+
+        if(flag):
+            print(listAllResults)
+
+        if (len(listAllResults) > 1):
+            if (flag):
+                for eachList in listAllResults:
+                    if(len(eachList) > 0):
+                        list.append(eachList)
+
+        writer_path = "../../python_results.csv"
+        csv_module.write_to_csv(writer_path, list)
+
+def all_exe(flag, list):
+    # This call the module to run the shell scripts:
+
+    i = 1
+    j = 1
+    listAllResults = []
+    for eachElement in list:
+        case = eachElement
+        while i < 10:
+            j +=1
+            listResults = executeProgram(case, flag)
+            if(len(listResults)> 0):
+                listAllResults.append(listResults)
+                i+=1
+        print (j)
+
+    write(flag, listAllResults, case)
+
+def run(flag):
+    list = ["700", "600", "500"]
+    for each in list:
+        all_exe(flag, each)
+
+run(True)

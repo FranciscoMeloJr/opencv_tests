@@ -63,9 +63,9 @@ def run(id):
             i += 1
     return ret
 
-def execution():
+def execution(exe):
     # execute a test calling the exec_program
-    ret = run(700)
+    ret = run(exe)
     if (ret is not -1):
         print("Open the file: ", ret[9:])
         return ret[9:]

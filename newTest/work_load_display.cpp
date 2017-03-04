@@ -34,9 +34,9 @@ int main( int argc, char** argv )
     if (pid==0) { /* child process */
 
                 static char *argv[]={"obama.jpg"};
-                tracepoint(hello_world, my_first_tracepoint, 23, "hi there!");
+                tracepoint(hello_world, my_first_tracepoint, 3, "display");
                 execv("DisplayImage3.0",argv);
-                tracepoint(hello_world, my_first_tracepoint, 23, "hi there!");
+                tracepoint(hello_world, my_first_tracepoint, 3, "display");
                 exit(127); /* only if execv fails */
     }
     else { /* pid!=0; parent process */
