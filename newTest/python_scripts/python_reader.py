@@ -39,6 +39,7 @@ def read(trace_path, info, print_flag):
                 i = i + 1
 
     # shows the information:
+    delta2 = -1
     if (len(info_data2) > 1):
         delta2 = info_data2[1] - info_data2[0]
         if (print_flag):

@@ -6,7 +6,15 @@ import shell_scripts
 #module to write csv:
 import csv_module
 
+#module to parse xml:
+import xml_parser
+
+#module to read from the xml_parser
 import sys
+
+#w = white
+#b = black
+FILE = "../../python_resultsPNG-w.csv"
 
 #function to take all metrics:
 def take_all_metrics(trace_path, print_flag, counters_list, case):
@@ -17,9 +25,9 @@ def take_all_metrics(trace_path, print_flag, counters_list, case):
     return python_reader.readList(trace_path, counters_list, print_flag, case)
 
 #this function executes the program and takes its results as a list:
-def executeProgram(caseSelection, flag):
+def executeProgram(caseSelection, flag, letter):
     case = caseSelection
-    tracePath = shell_scripts.execution(case, flag)
+    tracePath = shell_scripts.execution(case, flag, letter)
 
     # This module calls the reading module
     # trace_path1 = "/tmp/test1/data/500x500.jpg-pf-1/ust/uid/1000/64-bit"
@@ -30,7 +38,9 @@ def executeProgram(caseSelection, flag):
         print(tracePath)
         print_flag = flag
         # This module calls the reading module to read all the info:
-        counters_list = ["my_string_field", "my_integer_field","elapsed", "perf_thread_page_fault", "perf_thread_cache_misses", "perf_thread_instructions"]
+        counters_list = xml_parser.read('../../data/metrics.xml')
+        #counters_list = ["my_string_field", "my_integer_field","elapsed", "perf_thread_page_fault", "perf_thread_cache_misses", "perf_thread_instructions"]
+
         listResults = take_all_metrics(tracePath, print_flag, counters_list, case)
 
     else:
@@ -56,10 +66,10 @@ def write(flag, listAllResults, case):
                     if(len(eachList) > 0):
                         list.append(eachList)
 
-        writer_path = "../../python_results.csv"
+        writer_path = FILE
         csv_module.write_to_csv(writer_path, list, True)
 
-def all_exe(flag, list, qtd):
+def all_exe(flag, list, qtd, letter):
     # This call the module to run the shell scripts:
 
     j = 1
@@ -71,7 +81,7 @@ def all_exe(flag, list, qtd):
             print (case)
         while i < qtd:
             j +=1
-            listResults = executeProgram(case, flag)
+            listResults = executeProgram(case, flag, letter)
             if(len(listResults)> 0):
                 listAllResults.append(listResults)
                 i+=1
@@ -80,7 +90,16 @@ def all_exe(flag, list, qtd):
     write(flag, listAllResults, case)
 
 def run(flag):
-    list = [700, 600, 500]
-    all_exe(flag, list, 1000)
+    list = []
+    k = 1
+    max = 10
+    letter = "w"
+    times = 100
+    while k <max:
+        list.append((k*100))
+        k= k+1
+    if(flag):
+        list
+    all_exe(flag, list, times, letter)
 
 run(True)
