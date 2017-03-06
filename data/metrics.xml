@@ -8,7 +8,7 @@
         <metric name="perf_thread_instructions"></metric>
     </metrics>
     <limits>
-        <max name="1"></max>
+        <max name="10"></max>
     </limits>
     <repetition>
         <times name="1"></times>
@@ -21,6 +21,9 @@
     </ext>
     <type_of_file>
        <type name=".jpg"></type>
-    </type_of_file>
+    </type_of_file>  
+    <type_of_program>
+       <program name="../opening_opencv"></program>
+    </type_of_program>
 
 </data>

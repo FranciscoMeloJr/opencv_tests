@@ -14,12 +14,13 @@ static struct timespec ts_start, ts_end;
 #define toc(end) clock_gettime(CLOCK_MONOTONIC, &end)
 #define elapsed_nsec(start, end) (end.tv_nsec + 1E9 * end.tv_sec) - (start.tv_nsec + 1E9 * start.tv_sec)
 
-using namespace std;
-using namespace cv;
 
+using namespace cv;
+using namespace std;
 int main( int argc, char** argv )
 {
     /*Spawn a child to run the program.*/
+   cout << "main";
     Mat image;
     int i =0;
     if( argc != 2)
@@ -37,9 +38,9 @@ int main( int argc, char** argv )
 
     if (pid==0) { /* child process */
 
-                static char *argv[]={"obama.jpg"};
                 tracepoint(hello_world, my_first_tracepoint, 3, "display");
                 //execv("../DisplaiImage/DisplayImage_3-0",argv);
+                cout << argv[1];
 		image = imread(argv[1], CV_LOAD_IMAGE_COLOR);   // Read the file
 		if(! image.data )                              // Check for invalid input
 		{
@@ -52,6 +53,9 @@ int main( int argc, char** argv )
     else { /* pid!=0; parent process */
                 waitpid(pid,0,0); /* wait for child to exit */
     }
+    namedWindow( "Display window", WINDOW_AUTOSIZE );// Create a window for display.
+    imshow( "Display window", image );    
+
     toc(t_end);//clock_t end = clock();
     time_elapsed = elapsed_nsec(t_start, t_end); //double elapsed_secs = double(end - begin) / CLOCKS_PER_SEC;
     string s = argv[1];

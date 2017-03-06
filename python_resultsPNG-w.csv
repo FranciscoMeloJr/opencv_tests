@@ -1,0 +1,11 @@
+workload,function,version,elapsed time,perf_thread_page_fault,perf_thread_cache_misses,perf_thread_instructions
+100,display,3,94624,0,421,3456
+200,display,3,111329,0,488,3456
+300,display,3,93702,0,453,3456
+400,display,3,99970,0,407,3460
+500,display,3,86245,0,427,3456
+600,display,3,94570,0,409,3456
+700,display,3,93054,0,430,3456
+800,display,3,91730,0,436,3456
+900,display,3,100860,0,416,3456
+1000,display,3,88670,0,375,3458

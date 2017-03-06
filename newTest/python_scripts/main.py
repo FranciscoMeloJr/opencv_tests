@@ -9,25 +9,31 @@ import csv_module
 #module to parse xml:
 import xml_parser
 
+import time
 #module to read from the xml_parser
 import sys
 
 #w = white
 #b = black
-FILE = "../../python_resultsPNG-w.csv"
 
 #function to take all metrics:
-def take_all_metrics(trace_path, print_flag, counters_list, case):
+def take_all_metrics(trace_path, print_flag, counters_list, case, path):
     extended_path = "/ust/uid/1000/64-bit"
     if extended_path not in trace_path:
-        trace_path+=extended_path
+        trace_path+=path
 
+    print (trace_path, counters_list, print_flag, case)
+    counters_list = ['my_string_field', 'my_integer_field', 'elapsed', 'perf_thread_page_fault', 'perf_thread_cache_misses', 'perf_thread_instructions']
     return python_reader.readList(trace_path, counters_list, print_flag, case)
 
 #this function executes the program and takes its results as a list:
-def executeProgram(caseSelection, flag, letter):
+def executeProgram(caseSelection, flag, letter, counters, ext_path, type_of_file, program):
     case = caseSelection
-    tracePath = shell_scripts.execution(case, flag, letter)
+    #execution(True, "black/b100.jpg")
+    file_name = letter
+    file_name += str(caseSelection)
+    file_name += type_of_file
+    tracePath = shell_scripts.execution(flag, file_name, program)
 
     # This module calls the reading module
     # trace_path1 = "/tmp/test1/data/500x500.jpg-pf-1/ust/uid/1000/64-bit"
@@ -38,10 +44,11 @@ def executeProgram(caseSelection, flag, letter):
         print(tracePath)
         print_flag = flag
         # This module calls the reading module to read all the info:
-        counters_list = xml_parser.read('../../data/metrics.xml')
+        counters_list = counters
+
         #counters_list = ["my_string_field", "my_integer_field","elapsed", "perf_thread_page_fault", "perf_thread_cache_misses", "perf_thread_instructions"]
 
-        listResults = take_all_metrics(tracePath, print_flag, counters_list, case)
+        listResults = take_all_metrics(tracePath, print_flag, counters_list, case, ext_path)
 
     else:
         print("Error on the tracing")
@@ -49,7 +56,7 @@ def executeProgram(caseSelection, flag, letter):
     return listResults
 
 #this function writes to a csv file:
-def write(flag, listAllResults, case):
+def write(flag, listAllResults, case, FILE):
     if (len(listAllResults) > 0):
         list = []
         data = case
@@ -67,13 +74,17 @@ def write(flag, listAllResults, case):
                         list.append(eachList)
 
         writer_path = FILE
+        print (writer_path)
         csv_module.write_to_csv(writer_path, list, True)
 
-def all_exe(flag, list, qtd, letter):
+def all_exe(flag, list, qtd, letter, counters, FILE, ext_path, type_of_file, program):
     # This call the module to run the shell scripts:
 
     j = 1
     listAllResults = []
+    case = -1
+    if(flag):
+        print (list)
     for eachElement in list:
         case = eachElement
         i = 0
@@ -81,25 +92,50 @@ def all_exe(flag, list, qtd, letter):
             print (case)
         while i < qtd:
             j +=1
-            listResults = executeProgram(case, flag, letter)
+            listResults = executeProgram(case, flag, letter, counters, ext_path, type_of_file, program)
             if(len(listResults)> 0):
                 listAllResults.append(listResults)
                 i+=1
         print (j)
+    if(case != -1):
+        write(flag, listAllResults, case, FILE)
+        return 1
+    else:
+        print("Error on the tracing")
+        return -1
 
-    write(flag, listAllResults, case)
-
-def run(flag):
+def run(xml, flag):
     list = []
     k = 1
-    max = 10
-    letter = "w"
-    times = 100
-    while k <max:
+    max = 11
+    letter = "white/w"
+    times = 1000
+    xml_file = xml
+    counters = xml_parser.read_metrics(xml_file)
+    max = int(xml_parser.read_max(xml_file)[0])
+    times = int(xml_parser.read_times(xml_file)[0])
+    FILE = xml_parser.read_file(xml_file)[0]
+    ext_path = xml_parser.read_ext(xml_file)[0]
+    type_of_file = xml_parser.read_type(xml_file)[0]
+    program = xml_parser.read_program(xml_file)[0]
+
+    if(flag):
+        print ("counters ", counters)
+        print ("max ", max)
+        print ("times ", times)
+        print ("file ", FILE)
+        print ("ext path", ext_path)
+        print ("type of file", type_of_file)
+
+    while k <= int(max):
         list.append((k*100))
         k= k+1
     if(flag):
         list
-    all_exe(flag, list, times, letter)
+    all_exe(flag, list, times, letter, counters, FILE, ext_path, type_of_file, program)
 
-run(True)
+    time.sleep(5)
+    #reading:
+    shell_scripts.exec_reading('/home/frank/Desktop/Research/OpenCV/' + FILE[6:])
+
+run( '../../data/metrics.xml',True)

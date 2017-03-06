@@ -1,1 +1,1 @@
-/home/frank/Desktop/Research/OpenCV test/DisplayImage/CMakeFiles/OpenCvProject.dir
+/home/frank/Desktop/Research/OpenCV/DisplayImage/CMakeFiles/DisplayProject.dir

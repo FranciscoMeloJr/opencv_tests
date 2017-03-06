@@ -20,7 +20,7 @@ int main( int argc, char** argv )
     int i =0;
     if( argc != 2)
     {
-     cout <<" Usage: display_image ImageToLoadAndDisplay" << endl;
+     cout <<" Usage: program_to_test input_file" << endl;
      return -1;
     }
 
@@ -32,10 +32,9 @@ int main( int argc, char** argv )
     tic(t_start);//clock_t begin = clock();
 
     if (pid==0) { /* child process */
-
-                static char *argv[]={"obama.jpg"};
+                
                 tracepoint(hello_world, my_first_tracepoint, 3, "display");
-                execv("DisplayImage3.0",argv);
+                execv("../DisplayImage/DisplayProject", argv); //../DisplayImage/DisplayProject
                 tracepoint(hello_world, my_first_tracepoint, 3, "display");
                 exit(127); /* only if execv fails */
     }
@@ -45,9 +44,9 @@ int main( int argc, char** argv )
     toc(t_end);//clock_t end = clock();
     time_elapsed = elapsed_nsec(t_start, t_end); //double elapsed_secs = double(end - begin) / CLOCKS_PER_SEC;
     string s = argv[1];
-    string result = s.substr (8,3); 
+    string result = s.substr (s.length()-7,3); 
     //string token = s.substr(0, s.find(delimiter));
-    std::cout << 0  <<"," << time_elapsed  << "," << result  <<"," << "Display" ;
+    std::cout << 0  <<"," << time_elapsed  << "," << result  <<"," << "Display" << endl;
     
     return 0;
 }

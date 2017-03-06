@@ -1,6 +1,7 @@
 CXX ?= g++
 GCC = gcc
-FLAGS = -pg
+FLAGS = 
+#-pg
 #-finstrument-functions
 CXXFLAGS += -c -Wall $(shell pkg-config --cflags opencv) $(FLAGS)
 LDFLAGS += $(-llttng-ust -ldl)

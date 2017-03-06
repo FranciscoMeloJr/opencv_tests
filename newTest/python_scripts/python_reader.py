@@ -6,58 +6,34 @@ import sys
 def read(trace_path, info, print_flag):
     print("Reading ", info);
     print (trace_path);
-    info_data = []
-    info_data2 = []
-    version = 0
+    info_data = -1
+    elapsed = -1
     trace_collection = babeltrace.reader.TraceCollection()
 
     trace_collection.add_trace(trace_path, 'ctf')
 
+    ret = -1
     for event in trace_collection.events:
-        if(event.name == 'hello_world:my_first_tracepoint'):
-            if (print_flag):
-                print("event name: %s timestamp %d." % (event.name, event.timestamp))
-                info_data2.append(event.timestamp)
-            fields = dict()
-            i = 0
+        if (event.name == 'hello_world:my_first_tracepoint'):
+            print("event name: %s timestamp %d." % (event.name, event.timestamp))
+            if(elapsed is -1):
+                print ("elapsed")
+                elapsed = event.timestamp
+            else:
+                if (info is "elapsed"):
+                    return (event.timestamp - elapsed)
             for k, v in event.items():
                 field = event._field(k)
-                if (print_flag):
-                    print("field name", field.name);
-                if(field.name == info):
-                    if(print_flag):
-                        print("field ", info, field.value);
-                    info_data.append(field.value)
-                    if (print_flag):
-                        print("elapsed %s", info, info_data);
-                    if(field.name == "my_integer_field"): #this will take the version
-                        version = field.value
-                        return version
-                    if (field.name == "my_string_field"):  # this will take the function
-                        function = field.value
-                        return function
-                i = i + 1
-
-    # shows the information:
-    delta2 = -1
-    if (len(info_data2) > 1):
-        delta2 = info_data2[1] - info_data2[0]
-        if (print_flag):
-            print("Delta time stamp", delta2)
-
-    if(info == "elapsed"):
-        return delta2
-
-    #shows the information:
-    if(len(info_data) > 1):
-        delta = info_data[1] - info_data[0]
-        if (print_flag):
-            print("Delta", delta)
-        return delta
-    else:
-        if (print_flag):
-            print("Length < 1")
-        return -1
+                if (field.name == info):
+                    print (info , field.name, field.value, info_data)
+                    if((str(info) is "my_integer_field") or (str(info) is "my_string_field")):
+                        return field.value
+                    if (info_data is -1):
+                        info_data = field.value
+                    else:
+                        ret = (int(field.value) - int(info_data))
+    print (ret)
+    return ret
 
 #Take a list of metrics and run read for each one:
 def readList(trace_path, info, print_flag, arg1):
@@ -65,7 +41,12 @@ def readList(trace_path, info, print_flag, arg1):
     list_result.append(arg1)
     for each in info:
         ret = read(trace_path, each, print_flag)
+        print (ret)
         if(ret is not -1):
             list_result.append(ret)
 
+    print (list_result)
     return list_result
+
+readList("/tmp/ust-traces-python-3/ust/uid/1000/64-bit", ['my_string_field', 'my_integer_field', 'elapsed', 'perf_thread_page_fault', 'perf_thread_cache_misses', 'perf_thread_instructions'], True, 100)
+#['my_string_field', 'my_integer_field', 'elapsed', 'perf_thread_page_fault', 'perf_thread_cache_misses', 'perf_thread_instructions']
