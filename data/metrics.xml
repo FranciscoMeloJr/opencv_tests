@@ -1,0 +1,26 @@
+<data>
+    <metrics>
+	<metric name="my_string_field"></metric>
+	<metric name="my_integer_field"></metric>
+	<metric name="elapsed"></metric>
+	<metric name="perf_thread_page_fault"></metric>
+        <metric name="perf_thread_cache_misses"></metric>
+        <metric name="perf_thread_instructions"></metric>
+    </metrics>
+    <limits>
+        <max name="1"></max>
+    </limits>
+    <repetition>
+        <times name="1"></times>
+    </repetition>
+    <file_name>
+        <file name="../../python_resultsPNG-w.csv"></file>
+    </file_name>	
+    <ext> 
+       <path name="/ust/uid/1000/64-bit"></path>
+    </ext>
+    <type_of_file>
+       <type name=".jpg"></type>
+    </type_of_file>
+
+</data>
