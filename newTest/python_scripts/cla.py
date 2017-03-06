@@ -1,4 +1,4 @@
-def classify(list, flag):
+def create_runs(list, flag):
     list_runs = []
     for each in list:
         print (each)
@@ -6,8 +6,15 @@ def classify(list, flag):
         list_runs.append(a)
 
     print (len(list_runs))
-    print (list_runs[1].get_metrics_1())
+    print (list_runs[1].show())
 
+    return list_runs
+
+def take_metrics_1(list_runs, flag):
+    for each in list_runs:
+        print(each.show())
+
+#Class used for classification:
 class Run:
     """A simple example class"""
     id = -1

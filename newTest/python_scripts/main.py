@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 #calls the reading
 import python_reader
 #calls the sheel creator
@@ -14,7 +15,6 @@ import cla
 import time
 
 import sys
-sys.path.extend(['/home/frank/Desktop/Research/OpenCV/newTest/python_scripts/classifier.py'])
 
 #module to read from the xml_parser
 import sys
@@ -144,6 +144,15 @@ def run(xml, flag):
     #reading:
     shell_scripts.exec_reading('/home/frank/Desktop/Research/OpenCV/' + FILE[6:])
 
-#run( '../../data/metrics.xml',True)
-list = csv_module.read_from_csv("../../python_results.csv", False)
-cla.classify(list, True)
+#This function does the analysis:
+def analysis(csv):
+    list = csv_module.read_from_csv(csv, False)
+    cla.create_runs(list, True)
+    return 1
+
+def call_analysis():
+    csv = "/home/frank/Desktop/Research/OpenCV/python_results.csv"
+    return analysis(csv)
+
+# run( '../../data/metrics.xml',True)
+call_analysis()

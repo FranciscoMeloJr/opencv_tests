@@ -24,4 +24,4 @@ def read_from_csv(csv_name, flag):
 
     return list
 
-read_from_csv("../../python_results.csv", True)
+#read_from_csv("../../python_results.csv", True)
