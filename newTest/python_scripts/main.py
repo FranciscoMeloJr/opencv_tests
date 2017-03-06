@@ -9,7 +9,13 @@ import csv_module
 #module to parse xml:
 import xml_parser
 
+import cla
+
 import time
+
+import sys
+sys.path.extend(['/home/frank/Desktop/Research/OpenCV/newTest/python_scripts/classifier.py'])
+
 #module to read from the xml_parser
 import sys
 
@@ -138,4 +144,6 @@ def run(xml, flag):
     #reading:
     shell_scripts.exec_reading('/home/frank/Desktop/Research/OpenCV/' + FILE[6:])
 
-run( '../../data/metrics.xml',True)
+#run( '../../data/metrics.xml',True)
+list = csv_module.read_from_csv("../../python_results.csv", False)
+cla.classify(list, True)

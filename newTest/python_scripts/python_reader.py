@@ -48,5 +48,5 @@ def readList(trace_path, info, print_flag, arg1):
     print (list_result)
     return list_result
 
-readList("/tmp/ust-traces-python-3/ust/uid/1000/64-bit", ['my_string_field', 'my_integer_field', 'elapsed', 'perf_thread_page_fault', 'perf_thread_cache_misses', 'perf_thread_instructions'], True, 100)
+#readList("/tmp/ust-traces-python-3/ust/uid/1000/64-bit", ['my_string_field', 'my_integer_field', 'elapsed', 'perf_thread_page_fault', 'perf_thread_cache_misses', 'perf_thread_instructions'], True, 100)
 #['my_string_field', 'my_integer_field', 'elapsed', 'perf_thread_page_fault', 'perf_thread_cache_misses', 'perf_thread_instructions']
