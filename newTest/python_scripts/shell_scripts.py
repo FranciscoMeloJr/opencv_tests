@@ -2,13 +2,13 @@
 import subprocess
 
 #This function does the tracing, replacing the bash scripts:
-def trace(image_name, id, program):
+def trace(id, program, input):
     season_name = " x "
-    image = image_name #image = "../data/500x500.jpg"
-    print(image_name)
+    image = input #image = "../data/500x500.jpg"
+    print(input)
     i = 10
     output = "--output=/tmp/ust-traces-python-" + str(id)
-
+    output_run = -1
     #do the process:
     subprocess.check_call("lttng create"+ season_name + output, shell=True)
     subprocess.check_call(["lttng enable-event -u -a"], shell=True)
@@ -21,7 +21,10 @@ def trace(image_name, id, program):
 
     try:
         # program execution:
-        subprocess.check_output("LD_PRELOAD=/usr/local/lib/liblttng-ust-fork.so "+ program +" "+ image , shell=True)
+        try:
+            output_run = subprocess.check_output("LD_PRELOAD=/usr/local/lib/liblttng-ust-fork.so "+ program +" "+ input , shell=True)
+        except ValueError:
+            print ("error")
         subprocess.check_call("lttng stop", shell=True)
         subprocess.check_call(["lttng destroy", str(i)], shell=True)
         subprocess.check_call(["echo", str(i)], shell=True)
@@ -35,12 +38,14 @@ def trace(image_name, id, program):
         #in case of execption, it will return -1:
         output = -1
 
+    print(output_run)
     return output
 
 #execute the program:
-def exec_program():
-    image = "../data/black/b500.jpg"
-    subprocess.check_call("LD_PRELOAD=/usr/local/lib/liblttng-ust-fork.so ../opencv " + image, shell=True)
+def exec_program(input_value):
+    input = str(input_value)
+    program = "../program_to_load_program "
+    subprocess.check_call("LD_PRELOAD=/usr/local/lib/liblttng-ust-fork.so " + program + input, shell=True)
 
 #execute the program:
 def exec_reading(file):
@@ -71,7 +76,7 @@ def run_cases(id, flag):
     return ret
 
 #calling the function
-def run(flag, file, program):
+def run_opencv(flag, file, program):
     trace_data = 0
     ret = -1
 
@@ -81,15 +86,39 @@ def run(flag, file, program):
         print (init)
     image_name = init
     trace_season = 3
-    ret = trace(image_name, trace_season, program)
+    ret = trace(trace_season, program, image_name)
 
     return ret
 
-def execution(flag, file, program):
+#calling the function
+def run_fib(flag, program, input):
+    trace_data = 0
+    ret = -1
+
+    if(flag):
+        print (input)
+    trace_season = 5
+    ret = trace(trace_season, program, str(input))
+
+    return ret
+
+def execution_fib(flag, program, input):
     # execute a test calling the exec_program
     if(flag):
-        print (execution)
-    ret = run(flag, file, program)
+        print (execution_cv)
+    ret = run_fib(flag, program, input)
+    if (ret is not -1):
+        print("Open the file: ", ret[9:])
+        return ret[9:]
+    else:
+        print("An error just occured")
+        return -1
+
+def execution_cv(flag, program, file):
+    # execute a test calling the exec_program
+    if(flag):
+        print (execution_cv)
+    ret = run_opencv(flag, file, program)
     if (ret is not -1):
         print("Open the file: ", ret[9:])
         return ret[9:]
@@ -140,3 +169,5 @@ def trace_selected(image_name, id, list):
         output = -1
 
     return output
+
+execution_fib(True, "../program_to_load_program", 5)

@@ -7,7 +7,6 @@
 #include <iostream>
 #include "hello-tp.h" //for the tracing point
 
-static struct timespec ts_start, ts_end;
 #define tic(start) clock_gettime(CLOCK_MONOTONIC, &start)
 #define toc(end) clock_gettime(CLOCK_MONOTONIC, &end)
 #define elapsed_nsec(start, end) (end.tv_nsec + 1E9 * end.tv_sec) - (start.tv_nsec + 1E9 * start.tv_sec)
@@ -17,7 +16,7 @@ using namespace std;
 int main( int argc, char** argv )
 {
     /*Spawn a child to run the program.*/
-    int i =0;
+    
     if( argc != 2)
     {
      cout <<" Usage: program_to_test input_file" << endl;
@@ -33,9 +32,9 @@ int main( int argc, char** argv )
 
     if (pid==0) { /* child process */
                 
-                tracepoint(hello_world, my_first_tracepoint, 3, "display");
-                execv("../DisplayImage/DisplayProject", argv); //../DisplayImage/DisplayProject
-                tracepoint(hello_world, my_first_tracepoint, 3, "display");
+                tracepoint(hello_world, my_first_tracepoint, 3, "fib");
+                execv("./fib", argv); //../DisplayImage/DisplayProject
+                tracepoint(hello_world, my_first_tracepoint, 3, "fib");
                 exit(127); /* only if execv fails */
     }
     else { /* pid!=0; parent process */
@@ -43,10 +42,10 @@ int main( int argc, char** argv )
     }
     toc(t_end);//clock_t end = clock();
     time_elapsed = elapsed_nsec(t_start, t_end); //double elapsed_secs = double(end - begin) / CLOCKS_PER_SEC;
-    string s = argv[1];
-    string result = s.substr (s.length()-7,3); 
+    //string s = argv[1];
+    string result = argv[1]; //string result = s.substr (s.length()-7,3); 
     //string token = s.substr(0, s.find(delimiter));
-    std::cout << 0  <<"," << time_elapsed  << "," << result  <<"," << "Display" << endl;
-    
+    std::cout << 0  <<"," << time_elapsed  << "," << result  <<"," << "fib" << endl;
+       
     return 0;
 }

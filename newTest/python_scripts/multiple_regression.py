@@ -2,9 +2,6 @@
 import sys
 import csv
 
-print 'Number of arguments:', len(sys.argv), 'arguments.'
-print 'Argument List:', str(sys.argv)
-
 import numpy as np
 import statsmodels.api as sm
 
@@ -12,8 +9,10 @@ import numpy as np
  
 from sklearn import linear_model
 
-def read_csv(flag):
-    f = open("../../python_results.csv", 'rb')
+
+def read_csv(flag, file_to_open):
+    print file_to_open
+    f = open(file_to_open, 'rb')
     list_runs = []
     reader = csv.reader(f)
     for row in reader:
@@ -73,9 +72,9 @@ def take_x(list, flag):
     
     return x
         
-def run():
-    flag = False
-    result = read_csv(flag)
+def run(file_to_open):
+    flag = True
+    result = read_csv(flag, file_to_open)
     y = take_y(result, flag)
     x = take_x(result, flag)
     print len(y)
@@ -83,10 +82,16 @@ def run():
 
     print reg_m(y, x).summary()
     
-run()
     
 #clf = linear_model.LinearRegression()
 #clf.fit([[getattr(t, 'x%d' % i) for i in range(1, 8)] for t in texts],
 #        [t.y for t in texts])
 
 
+print 'Number of arguments:', len(sys.argv), 'arguments.'
+print 'Argument List:', str(sys.argv)
+
+if(len(sys.argv)> 2):
+    run(sys.argv[1])
+else:
+    run("/home/frank/Desktop/Research/OpenCV/python_resultsFib.csv")
