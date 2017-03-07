@@ -147,12 +147,19 @@ def run(xml, flag):
 #This function does the analysis:
 def analysis(csv):
     list = csv_module.read_from_csv(csv, False)
-    cla.create_runs(list, True)
-    return 1
+    list_runs = cla.create_runs(list, False)
+    i = 0
+    results = []
+    while (i < 5):
+        results.append(cla.take_metrics_index(list_runs, i, False))
+        i = i+1
+
+    cla.correlation(sorted(results[0]), sorted(results[3]))
+    return True
 
 def call_analysis():
     csv = "/home/frank/Desktop/Research/OpenCV/python_results.csv"
     return analysis(csv)
 
-# run( '../../data/metrics.xml',True)
+#run( '../../data/metrics.xml',True)
 call_analysis()

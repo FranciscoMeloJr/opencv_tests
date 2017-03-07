@@ -5,7 +5,7 @@
 #include <sys/wait.h> /* for wait */
 #include <ctime>
 #include <iostream>
-//#include "hello-tp.h" //for the tracing point
+#include "hello-tp.h" //for the tracing point
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
 
@@ -20,7 +20,7 @@ using namespace std;
 int main( int argc, char** argv )
 {
     /*Spawn a child to run the program.*/
-   cout << "main";
+    cout << "main";
     Mat image;
     int i =0;
     if( argc != 2)
@@ -38,17 +38,17 @@ int main( int argc, char** argv )
 
     if (pid==0) { /* child process */
 
-                //tracepoint(hello_world, my_first_tracepoint, 3, "display");
+                tracepoint(hello_world, my_first_tracepoint, 3, "display");
                 //execv("../DisplaiImage/DisplayImage_3-0",argv);
                 //cout << argv[1];
 		image = imread(argv[1], CV_LOAD_IMAGE_COLOR);   // Read the file
+		tracepoint(hello_world, my_first_tracepoint, 3, "display");
 		if(! image.data )                              // Check for invalid input
 		{
 		        cout <<  "Could not open or find the image" << std::endl ;
 		        return -1;
 		}
-                //tracepoint(hello_world, my_first_tracepoint, 3, "display");
-                //exit(127); /* only if execv fails */
+               exit(127); /* only if execv fails */
     }
     else { /* pid!=0; parent process */
                 waitpid(pid,0,0); /* wait for child to exit */
