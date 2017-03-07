@@ -136,7 +136,7 @@ def all_exe(flag, list, qtd, letter, counters, FILE, ext_path, type_of_file, pro
         print("Error on the tracing")
         return -1
 
-def all_exe_fib(flag, list, qtd, letter, counters, FILE, ext_path, program):
+def all_exe_fib(flag, list, qtd, counters, FILE, ext_path, program):
     # This call the module to run the shell scripts:
 
     j = 1
@@ -201,8 +201,6 @@ def run_cv(xml, flag):
 def run_fib(xml, flag):
     list = []
     k = 1
-    max = 11
-    letter = "white/w"
     times = 1000
     xml_file = xml
     counters = xml_parser.read_metrics(xml_file)
@@ -223,12 +221,13 @@ def run_fib(xml, flag):
         list.append((k))
         k= k+1
     if(flag):
-        listgitogram)
+        list
+    all_exe_fib(flag, list, times, counters, FILE, ext_path, program)
 
     time.sleep(5)
     #reading:
     shell_scripts.exec_reading(current_path + FILE[6:])
-    shell_scripts.execution_fib(True, "python multiple_regression ", current_path +FILE[6:] )
+    shell_scripts.execution_fib(True, "python multiple_regression.py ", current_path +FILE[6:] )
 
 #This function does the analysis:
 def analysis(csv):

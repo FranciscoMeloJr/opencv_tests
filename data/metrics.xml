@@ -8,13 +8,13 @@
         <metric name="perf_thread_instructions"></metric>
     </metrics>
     <limits>
-        <max name="10"></max>
+        <max name="1000"></max>
     </limits>
     <repetition>
-        <times name="1"></times>
+        <times name="100"></times>
     </repetition>
     <file_name>
-        <file name="../../python_resultsPNG-w.csv"></file>
+        <file name="../../python_resultsFib.csv"></file>
     </file_name>	
     <ext> 
        <path name="/ust/uid/1000/64-bit"></path>
@@ -23,7 +23,7 @@
        <type name=".jpg"></type>
     </type_of_file>  
     <type_of_program>
-       <program name="../opening_opencv"></program>
+       <program name="../program_to_load_program"></program>
     </type_of_program>
 
 </data>

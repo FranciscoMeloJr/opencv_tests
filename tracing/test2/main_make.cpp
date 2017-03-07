@@ -8,11 +8,14 @@
 #include <sys/wait.h> /* for wait */
 #include <ctime>
 #include <stdio.h>
+//#include "hello-tp.h"
+#include <cyg.h>
+
 using namespace cv;
 using namespace std;
 
 
-int display(int argc, char ** argv){
+int display(int argc, char ** argv, int v){
 
   if( argc != 2)
     {
@@ -21,7 +24,9 @@ int display(int argc, char ** argv){
     }
 
     Mat image;
+    //tracepoint(hello_world, my_first_tracepoint, v, "display");
     image = imread(argv[1], CV_LOAD_IMAGE_COLOR);   // Read the file
+    //tracepoint(hello_world, my_first_tracepoint, v, "display");
 
     if(! image.data )                              // Check for invalid input
     {
@@ -36,15 +41,19 @@ int display(int argc, char ** argv){
     return 0;
 }
 
+int version(){
+  std::cout << "OpenCV version: "
+                        << CV_MAJOR_VERSION << "."
+                        << CV_MINOR_VERSION << "."
+                        << CV_SUBMINOR_VERSION
+                        << std::endl;
+  return (int) CV_MAJOR_VERSION;
+}
 int main(int argc, char ** argv)
 {
-  std::cout << "OpenCV version: "
-			<< CV_MAJOR_VERSION << "." 
-			<< CV_MINOR_VERSION << "."
-			<< CV_SUBMINOR_VERSION
-			<< std::endl;
+  int v = version();
   int ret = 0;
-  ret = display(argc, argv);
+  ret = display(argc, argv, v);
   return ret;
 }
 

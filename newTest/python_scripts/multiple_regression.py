@@ -73,7 +73,7 @@ def take_x(list, flag):
     return x
         
 def run(file_to_open):
-    flag = True
+    flag = False
     result = read_csv(flag, file_to_open)
     y = take_y(result, flag)
     x = take_x(result, flag)
