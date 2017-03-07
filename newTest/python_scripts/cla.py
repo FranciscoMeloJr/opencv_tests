@@ -57,3 +57,8 @@ class Run:
 
     def get_metrics_index(self, index):
         return self.metrics[index]
+
+def multilinear_model():
+    clf = linear_model.LinearRegression()
+    clf.fit([[getattr(t, 'x%d' % i) for i in range(1, 8)] for t in texts],
+            [t.y for t in texts])
