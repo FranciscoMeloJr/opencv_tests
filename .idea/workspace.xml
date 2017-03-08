@@ -4,47 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/newTest/python_scripts/shell_scripts.py" line="27" mnemonic="4" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c3c44736-c738-48aa-a9fd-03bcdd8f62e5" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.~lock.python_resultsFib.csv#" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FaceDetection/CMakeFiles/3.2.2/CMakeCCompiler.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FaceDetection/CMakeFiles/3.2.2/CMakeCXXCompiler.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FaceDetection/CMakeFiles/3.2.2/CMakeDetermineCompilerABI_C.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FaceDetection/CMakeFiles/3.2.2/CMakeDetermineCompilerABI_CXX.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FaceDetection/CMakeFiles/3.2.2/CMakeSystem.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FaceDetection/CMakeFiles/3.2.2/CompilerIdC/CMakeCCompilerId.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FaceDetection/CMakeFiles/3.2.2/CompilerIdC/a.out" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FaceDetection/CMakeFiles/3.2.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FaceDetection/CMakeFiles/3.2.2/CompilerIdCXX/a.out" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FaceDetection/CMakeFiles/FaceDetection.dir/FaceDetection.cpp.o" afterPath="$PROJECT_DIR$/FaceDetection/CMakeFiles/FaceDetection.dir/FaceDetection.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FaceDetection/CMakeFiles/feature_tests.bin" afterPath="$PROJECT_DIR$/FaceDetection/CMakeFiles/feature_tests.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FaceDetection/FaceDetection" afterPath="$PROJECT_DIR$/FaceDetection/FaceDetection" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/newTest/work_load_display.o" afterPath="$PROJECT_DIR$/newTest/work_load_display.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FaceDetection/CMakeCache.txt" afterPath="$PROJECT_DIR$/FaceDetection/CMakeCache.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FaceDetection/CMakeFiles/CMakeDirectoryInformation.cmake" afterPath="$PROJECT_DIR$/FaceDetection/CMakeFiles/CMakeDirectoryInformation.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FaceDetection/CMakeFiles/CMakeOutput.log" afterPath="$PROJECT_DIR$/FaceDetection/CMakeFiles/CMakeOutput.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FaceDetection/CMakeFiles/FaceDetection.dir/CXX.includecache" afterPath="$PROJECT_DIR$/FaceDetection/CMakeFiles/FaceDetection.dir/CXX.includecache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FaceDetection/CMakeFiles/FaceDetection.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/FaceDetection/CMakeFiles/FaceDetection.dir/DependInfo.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FaceDetection/CMakeFiles/FaceDetection.dir/build.make" afterPath="$PROJECT_DIR$/FaceDetection/CMakeFiles/FaceDetection.dir/build.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FaceDetection/CMakeFiles/FaceDetection.dir/depend.internal" afterPath="$PROJECT_DIR$/FaceDetection/CMakeFiles/FaceDetection.dir/depend.internal" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FaceDetection/CMakeFiles/FaceDetection.dir/depend.make" afterPath="$PROJECT_DIR$/FaceDetection/CMakeFiles/FaceDetection.dir/depend.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FaceDetection/CMakeFiles/FaceDetection.dir/flags.make" afterPath="$PROJECT_DIR$/FaceDetection/CMakeFiles/FaceDetection.dir/flags.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FaceDetection/CMakeFiles/FaceDetection.dir/link.txt" afterPath="$PROJECT_DIR$/FaceDetection/CMakeFiles/FaceDetection.dir/link.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FaceDetection/CMakeFiles/FaceDetection.dir/progress.make" afterPath="$PROJECT_DIR$/FaceDetection/CMakeFiles/FaceDetection.dir/progress.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FaceDetection/CMakeFiles/Makefile.cmake" afterPath="$PROJECT_DIR$/FaceDetection/CMakeFiles/Makefile.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FaceDetection/CMakeFiles/Makefile2" afterPath="$PROJECT_DIR$/FaceDetection/CMakeFiles/Makefile2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FaceDetection/CMakeFiles/TargetDirectories.txt" afterPath="$PROJECT_DIR$/FaceDetection/CMakeFiles/TargetDirectories.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FaceDetection/CMakeFiles/feature_tests.c" afterPath="$PROJECT_DIR$/FaceDetection/CMakeFiles/feature_tests.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FaceDetection/CMakeFiles/feature_tests.cxx" afterPath="$PROJECT_DIR$/FaceDetection/CMakeFiles/feature_tests.cxx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FaceDetection/CMakeFiles/progress.marks" afterPath="$PROJECT_DIR$/FaceDetection/CMakeFiles/progress.marks" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FaceDetection/FaceDetection.cpp" afterPath="$PROJECT_DIR$/FaceDetection/FaceDetection.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FaceDetection/Makefile" afterPath="$PROJECT_DIR$/FaceDetection/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FaceDetection/cmake_install.cmake" afterPath="$PROJECT_DIR$/FaceDetection/cmake_install.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/metrics.xml" afterPath="$PROJECT_DIR$/data/metrics.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/newTest/Makefile" afterPath="$PROJECT_DIR$/newTest/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/newTest/work_load_display.cpp" afterPath="$PROJECT_DIR$/newTest/work_load_display.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python_resultsFib.csv" afterPath="$PROJECT_DIR$/python_resultsFib.csv" />
-    </list>
+    <list default="true" id="c3c44736-c738-48aa-a9fd-03bcdd8f62e5" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,8 +21,8 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/newTest/python_scripts/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="243" column="0" lean-forward="true" selection-start-line="243" selection-start-column="0" selection-end-line="243" selection-end-column="0" />
+            <state relative-caret-position="119">
+              <caret line="206" column="47" lean-forward="true" selection-start-line="206" selection-start-column="47" selection-end-line="206" selection-end-column="47" />
               <folding>
                 <element signature="e#41#61#0" expanded="true" />
               </folding>
@@ -828,8 +788,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/newTest/python_scripts/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="243" column="0" lean-forward="true" selection-start-line="243" selection-start-column="0" selection-end-line="243" selection-end-column="0" />
+        <state relative-caret-position="119">
+          <caret line="206" column="47" lean-forward="true" selection-start-line="206" selection-start-column="47" selection-end-line="206" selection-end-column="47" />
           <folding>
             <element signature="e#41#61#0" expanded="true" />
           </folding>
