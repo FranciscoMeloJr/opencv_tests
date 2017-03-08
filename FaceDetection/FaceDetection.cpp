@@ -113,7 +113,7 @@ int main( int argc, const char** argv )
     }
     else
     {
-        cout << "Detecting face(s) in " << inputName << endl;
+        //cout << "Detecting face(s) in " << inputName << endl;
         if( !image.empty() )
         {
             detectAndDraw( image, cascade, nestedCascade, scale, tryflip );
@@ -201,7 +201,7 @@ void detectAndDraw( Mat& img, CascadeClassifier& cascade,
         }
     }
     t = (double)getTickCount() - t;
-    printf( "detection time = %g ms\n", t*1000/getTickFrequency());
+    //printf( "detection time = %g ms\n", t*1000/getTickFrequency());
     for ( size_t i = 0; i < faces.size(); i++ )
     {
         Rect r = faces[i];
@@ -242,7 +242,9 @@ void detectAndDraw( Mat& img, CascadeClassifier& cascade,
             circle( img, center, radius, color, 3, 8, 0 );
         }
     }
-    imshow( "result", img );
+    //imshow( "result", img );
 }
 
+/*
 /usr/bin/c++ opencv-test.cpp.o -o FranciscoProject -rdynamic /usr/local/lib/libopencv_shape.so.3.1.0 /usr/local/lib/libopencv_stitching.so.3.1.0 /usr/local/lib/libopencv_superres.so.3.1.0 /usr/local/lib/libopencv_videostab.so.3.1.0 /usr/local/lib/libopencv_objdetect.so.3.1.0 /usr/local/lib/libopencv_calib3d.so.3.1.0 /usr/local/lib/libopencv_features2d.so.3.1.0 /usr/local/lib/libopencv_flann.so.3.1.0 /usr/local/lib/libopencv_highgui.so.3.1.0 /usr/local/lib/libopencv_ml.so.3.1.0 /usr/local/lib/libopencv_photo.so.3.1.0 /usr/local/lib/libopencv_video.so.3.1.0 /usr/local/lib/libopencv_videoio.so.3.1.0 /usr/local/lib/libopencv_imgcodecs.so.3.1.0 /usr/local/lib/libopencv_imgproc.so.3.1.0 /usr/local/lib/libopencv_core.so.3.1.0 -Wl,-rpath,/usr/local/lib
+*/

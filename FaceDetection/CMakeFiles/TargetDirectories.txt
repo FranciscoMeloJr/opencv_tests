@@ -1,1 +1,1 @@
-/home/frank/Desktop/Research/OpenCV test/FaceDetection/CMakeFiles/FaceDetection.dir
+/home/frank/Desktop/Research/OpenCV/FaceDetection/CMakeFiles/FaceDetection.dir

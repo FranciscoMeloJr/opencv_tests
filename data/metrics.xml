@@ -11,7 +11,7 @@
         <max name="1000"></max>
     </limits>
     <repetition>
-        <times name="100"></times>
+        <times name="1"></times>
     </repetition>
     <file_name>
         <file name="../../python_resultsFib.csv"></file>
@@ -23,7 +23,7 @@
        <type name=".jpg"></type>
     </type_of_file>  
     <type_of_program>
-       <program name="../program_to_load_program"></program>
+       <program name="../program_to_load_program2"></program>
     </type_of_program>
 
 </data>
