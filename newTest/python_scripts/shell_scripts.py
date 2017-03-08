@@ -170,4 +170,4 @@ def trace_selected(image_name, id, list):
 
     return output
 
-execution_fib(True, "../program_to_load_program", 5)
+#execution_fib(True, "../program_to_load_program", 5)

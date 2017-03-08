@@ -246,6 +246,17 @@ def call_analysis():
     csv = "/home/frank/Desktop/Research/OpenCV/python_results.csv"
     return analysis(csv)
 
-run_fib( '../../data/metrics.xml',True)
-#run_cv( '../../data/metrics.xml',True)
-#call_analysis()
+def run(xml):
+    print(xml)
+    xml_file = xml
+    program = xml_parser.read_program(xml_file)
+    program = str(program)
+    if ("fib" in str(program)):
+        run_fib(xml, True)
+
+    if ('program_to_load_program' in program):
+        run_cv(xml, True)
+
+run('../../data/metrics.xml')
+    #run_cv( '../../data/metrics.xml',True)
+    #call_analysis()
