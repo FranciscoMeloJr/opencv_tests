@@ -14,10 +14,10 @@
         <max name="10"></max>
     </limits>
     <repetition>
-        <times name="10"></times>
+        <times name="50"></times>
     </repetition>
     <file_name>
-        <file name="../../python_resultsFace.csv"></file>
+        <file name="../../python_resultsHough.csv"></file>
     </file_name>	
     <ext> 
        <path name="/ust/uid/1000/64-bit"></path>
@@ -26,10 +26,10 @@
        <type name=".jpg"></type>
     </type_of_file>  
     <path_to_data>
-       <file_data name="face/"></file_data>
+       <file_data name="buildings/"></file_data>
     </path_to_data> 
    <type_of_program>
-       <program name="../program_to_load_program2"></program>
+       <program name="../program_to_load_program3"></program>
     </type_of_program>
     
 </data>

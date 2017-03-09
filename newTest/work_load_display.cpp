@@ -32,9 +32,9 @@ int main( int argc, char** argv )
 
     if (pid==0) { /* child process */
                 
-                tracepoint(hello_world, my_first_tracepoint, 3, "face");
-                execv("../FaceDetection/FaceDetection", argv); //../DisplayImage/DisplayProject
-                tracepoint(hello_world, my_first_tracepoint, 3, "face");
+                tracepoint(hello_world, my_first_tracepoint, 3, "hough");
+                execv("../Houghlines/HoughLines", argv); //../DisplayImage/DisplayProject
+                tracepoint(hello_world, my_first_tracepoint, 3, "hough");
                 exit(127); /* only if execv fails */
     }
     else { /* pid!=0; parent process */
@@ -45,7 +45,7 @@ int main( int argc, char** argv )
     string s = argv[1];
     string result = s.substr (s.length()-7,3); 
     //string token = s.substr(0, s.find(delimiter));
-    std::cout << 0  <<"," << time_elapsed  << "," << result  <<"," << "face" << endl;
+    std::cout << "0"  <<"," << time_elapsed  << "," << result  <<"," << "hough" << endl;
        
     return 0;
 }

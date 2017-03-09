@@ -14,8 +14,6 @@ import cla
 
 import time
 
-import sys
-
 #module to read from the xml_parser
 import sys
 
@@ -94,7 +92,7 @@ def executeProgramFib(flag, counters, input_value, program, ext_path):
     return listResults
 
 #this function writes to a csv file:
-def write(flag, list_to_write, FILE):
+def write(flag, list_to_write, FILE, mode):
     if (len(list_to_write) > 0):
         list = []
         # first_line = ["workload:", "version", "perf_thread_page_fault", "perf_thread_cache_misses", "perf_thread_instructions"]
@@ -102,7 +100,7 @@ def write(flag, list_to_write, FILE):
 
         writer_path = FILE
         print (writer_path)
-        csv_module.write_to_csv(writer_path, list, True)
+        csv_module.write_to_csv(writer_path, list, True, mode)
 
 def all_exe(flag, list, qtd, letter, counters, FILE, ext_path, type_of_file, program):
     # This call the module to run the shell scripts:
@@ -115,7 +113,7 @@ def all_exe(flag, list, qtd, letter, counters, FILE, ext_path, type_of_file, pro
     metrics = ["workload", "function", "version", "elapsed_time", "perf_thread_page_fault", "perf_thread_cache_misses",
                "perf_thread_instructions", "perf:thread:cpu-cycles", "perf:thread:cycles",
                "perf:thread:context-switches"]
-    write(flag, metrics, FILE)
+    write(flag, metrics, FILE, "w")
     for eachElement in list:
         case = eachElement
         i = 0
@@ -125,7 +123,7 @@ def all_exe(flag, list, qtd, letter, counters, FILE, ext_path, type_of_file, pro
             j +=1
             listResults = executeProgramCV(case, flag, letter, counters, ext_path, type_of_file, program)
             if(len(listResults)> 0):
-                write(flag, listResults, FILE)
+                write(flag, listResults, FILE, "a")
                 i+=1
         print (j)
     if(case != -1):
@@ -139,14 +137,13 @@ def all_exe_fib(flag, list, qtd, counters, FILE, ext_path, program):
     # This call the module to run the shell scripts:
 
     j = 1
-    listAllResults = []
     case = -1
     if(flag):
         print (list)
     metrics = ["workload", "function", "version", "elapsed_time", "perf_thread_page_fault", "perf_thread_cache_misses",
                "perf_thread_instructions", "perf:thread:cpu-cycles", "perf:thread:cycles",
                "perf:thread:context-switches"]
-    write(flag, metrics, FILE)
+    write(flag, metrics, FILE, "w")
     for eachElement in list:
         each_input = eachElement
         i = 0
@@ -156,7 +153,7 @@ def all_exe_fib(flag, list, qtd, counters, FILE, ext_path, program):
             j +=1
             listResults = executeProgramFib(flag, counters, each_input, program, ext_path)
             if(len(listResults)> 0):
-                write(flag, listResults, FILE)
+                write(flag, listResults, FILE, "a")
                 i+=1
         print (j)
     case = each_input
@@ -179,7 +176,7 @@ def run_cv(xml, flag):
     ext_path = xml_parser.read_ext(xml_file)[0]
     type_of_file = xml_parser.read_type(xml_file)[0]
     program = xml_parser.read_program(xml_file)[0]
-
+    current_path = '/home/frank/Desktop/Research/OpenCV/'
     if(flag):
         print ("counters ", counters)
         print ("max ", max)
@@ -197,7 +194,8 @@ def run_cv(xml, flag):
 
     time.sleep(5)
     #reading:
-    shell_scripts.exec_reading('/home/frank/Desktop/Research/OpenCV/' + FILE[6:])
+    shell_scripts.exec_reading(current_path + FILE[6:])
+    shell_scripts.exec_analysis(current_path + FILE[6:])
 
 def run_fib(xml, flag):
     list = []
@@ -258,6 +256,10 @@ def run(xml):
     if ('program_to_load_program' in program):
         run_cv(xml, True)
 
-run('../../data/metrics.xml')
-    #run_cv( '../../data/metrics.xml',True)
-    #call_analysis()
+if(len(sys.argv)> 2):
+    run(sys.argv[1])
+
+else:
+    run('../../data/metrics.xml')
+    # run_cv( '../../data/metrics.xml',True)
+    # call_analysis()
