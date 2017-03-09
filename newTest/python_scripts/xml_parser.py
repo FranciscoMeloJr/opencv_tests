@@ -24,6 +24,16 @@ def read_max(file):
 
     return values
 
+def read_to_data(file):
+    xmldoc = minidom.parse(file)
+    itemlist = xmldoc.getElementsByTagName('file_data')
+    print(len(itemlist))
+    values = []
+    for s in itemlist:
+        values.append(s.attributes['name'].value)
+
+    return values
+
 def read_times(file):
 
     xmldoc = minidom.parse(file)

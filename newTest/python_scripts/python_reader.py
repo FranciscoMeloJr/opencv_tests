@@ -26,12 +26,14 @@ def read(trace_path, info, print_flag):
                 field = event._field(k)
                 if (field.name == info):
                     print (info , field.name, field.value, info_data)
-                    if((str(info) is "my_integer_field") or (str(info) is "my_string_field")):
+                    if(((str(info) is "my_integer_field")) or ((str(info) is "my_string_field"))):
                         return field.value
                     if (info_data is -1):
                         info_data = field.value
                     else:
+                        print (info , info_data, field.value)
                         ret = (int(field.value) - int(info_data))
+
     print (ret)
     return ret
 
@@ -48,5 +50,5 @@ def readList(trace_path, info, print_flag, arg1):
     print (list_result)
     return list_result
 
-#readList("/tmp/ust-traces-python-3/ust/uid/1000/64-bit", ['my_string_field', 'my_integer_field', 'elapsed', 'perf_thread_page_fault', 'perf_thread_cache_misses', 'perf_thread_instructions'], True, 100)
+#readList("/tmp/ust-traces-python-3/ust/uid/1000/64-bit", ['my_string_field', 'my_integer_field','elapsed', 'perf_thread_page_fault', 'perf_thread_cache_misses', 'perf_thread_instructions', 'perf_thread_page_fault', 'perf_thread_cache_misses', 'perf_thread_instructions', 'perf_thread_cpu_cycles', 'perf_thread_cycles', 'perf_thread_context_switches'], True, 100)
 #['my_string_field', 'my_integer_field', 'elapsed', 'perf_thread_page_fault', 'perf_thread_cache_misses', 'perf_thread_instructions']

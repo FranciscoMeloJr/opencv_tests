@@ -28,9 +28,15 @@ def take_all_metrics(trace_path, print_flag, counters_list, case, path):
     if extended_path not in trace_path:
         trace_path+=path
 
-    print (trace_path, counters_list, print_flag, case)
-    counters_list = ['my_string_field', 'my_integer_field', 'elapsed', 'perf_thread_page_fault', 'perf_thread_cache_misses', 'perf_thread_instructions', "perf_thread_cpu_cycles", "perf_thread_cycles", "perf_thread_context_switches"]
+    counters_list = to_string(counters_list)
+    counters_list = ['my_string_field', 'my_integer_field', 'elapsed', 'perf_thread_page_fault', 'perf_thread_cache_misses', 'perf_thread_instructions', 'perf_thread_cpu_cycles', 'perf_thread_cycles', 'perf_thread_context_switches']
     return python_reader.readList(trace_path, counters_list, print_flag, case)
+
+def to_string(list_non_strings):
+    list_strings = []
+    for each in list_non_strings:
+        list_strings.append(str(each))
+    return list_strings
 
 #this function executes the OpenCV program and takes its results as a list:
 def executeProgramCV(caseSelection, flag, letter, counters, ext_path, type_of_file, program):
@@ -51,7 +57,8 @@ def executeProgramCV(caseSelection, flag, letter, counters, ext_path, type_of_fi
         print_flag = flag
         # This module calls the reading module to read all the info:
         counters_list = counters
-        #counters_list = ["my_string_field", "my_integer_field","elapsed", "perf_thread_page_fault", "perf_thread_cache_misses", "perf_thread_instructions"]
+        print (counters_list)
+        counters_list = ["my_string_field", "my_integer_field","elapsed", "perf_thread_page_fault", "perf_thread_cache_misses", "perf_thread_instructions"]
 
         listResults = take_all_metrics(tracePath, print_flag, counters_list, case, ext_path)
 
@@ -77,7 +84,7 @@ def executeProgramFib(flag, counters, input_value, program, ext_path):
         # This module calls the reading module to read all the info:
         counters_list = counters
 
-        #counters_list = ["my_string_field", "my_integer_field","elapsed", "perf_thread_page_fault", "perf_thread_cache_misses", "perf_thread_instructions"]
+        counters_list = ["my_string_field", "my_integer_field","elapsed", "perf_thread_page_fault", "perf_thread_cache_misses", "perf_thread_instructions", "perf_thread_cpu_cycles", "perf_thread_cycles","perf_thread_context_switches"]
 
         listResults = take_all_metrics(tracePath, print_flag, counters_list, input_value, ext_path)
 
@@ -87,22 +94,11 @@ def executeProgramFib(flag, counters, input_value, program, ext_path):
     return listResults
 
 #this function writes to a csv file:
-def write(flag, listAllResults, case, FILE):
-    if (len(listAllResults) > 0):
+def write(flag, list_to_write, FILE):
+    if (len(list_to_write) > 0):
         list = []
-        data = case
-        metrics = ["workload","function", "version","elapsed_time","perf_thread_page_fault", "perf_thread_cache_misses", "perf_thread_instructions", "perf:thread:cpu-cycles","perf:thread:cycles","perf:thread:context-switches"]
         # first_line = ["workload:", "version", "perf_thread_page_fault", "perf_thread_cache_misses", "perf_thread_instructions"]
-        list.append(metrics)
-
-        if(flag):
-            print(listAllResults)
-
-        if (len(listAllResults) > 0):
-            if (flag):
-                for eachList in listAllResults:
-                    if(len(eachList) > 0):
-                        list.append(eachList)
+        list.append(list_to_write)
 
         writer_path = FILE
         print (writer_path)
@@ -112,10 +108,14 @@ def all_exe(flag, list, qtd, letter, counters, FILE, ext_path, type_of_file, pro
     # This call the module to run the shell scripts:
 
     j = 1
-    listAllResults = []
     case = -1
     if(flag):
         print (list)
+
+    metrics = ["workload", "function", "version", "elapsed_time", "perf_thread_page_fault", "perf_thread_cache_misses",
+               "perf_thread_instructions", "perf:thread:cpu-cycles", "perf:thread:cycles",
+               "perf:thread:context-switches"]
+    write(flag, metrics, FILE)
     for eachElement in list:
         case = eachElement
         i = 0
@@ -125,11 +125,11 @@ def all_exe(flag, list, qtd, letter, counters, FILE, ext_path, type_of_file, pro
             j +=1
             listResults = executeProgramCV(case, flag, letter, counters, ext_path, type_of_file, program)
             if(len(listResults)> 0):
-                listAllResults.append(listResults)
+                write(flag, listResults, FILE)
                 i+=1
         print (j)
     if(case != -1):
-        write(flag, listAllResults, case, FILE)
+        print("OK")
         return 1
     else:
         print("Error on the tracing")
@@ -143,6 +143,10 @@ def all_exe_fib(flag, list, qtd, counters, FILE, ext_path, program):
     case = -1
     if(flag):
         print (list)
+    metrics = ["workload", "function", "version", "elapsed_time", "perf_thread_page_fault", "perf_thread_cache_misses",
+               "perf_thread_instructions", "perf:thread:cpu-cycles", "perf:thread:cycles",
+               "perf:thread:context-switches"]
+    write(flag, metrics, FILE)
     for eachElement in list:
         each_input = eachElement
         i = 0
@@ -152,12 +156,12 @@ def all_exe_fib(flag, list, qtd, counters, FILE, ext_path, program):
             j +=1
             listResults = executeProgramFib(flag, counters, each_input, program, ext_path)
             if(len(listResults)> 0):
-                listAllResults.append(listResults)
+                write(flag, listResults, FILE)
                 i+=1
         print (j)
     case = each_input
     if(case != -1):
-        write(flag, listAllResults, case, FILE)
+        print("Ok")
         return 1
     else:
         print("Error on the tracing")
@@ -166,10 +170,8 @@ def all_exe_fib(flag, list, qtd, counters, FILE, ext_path, program):
 def run_cv(xml, flag):
     list = []
     k = 1
-    max = 11
-    letter = "white/w"
-    times = 1000
     xml_file = xml
+    letter = xml_parser.read_to_data(xml_file)[0]
     counters = xml_parser.read_metrics(xml_file)
     max = int(xml_parser.read_max(xml_file)[0])
     times = int(xml_parser.read_times(xml_file)[0])
@@ -226,7 +228,7 @@ def run_fib(xml, flag):
     time.sleep(5)
     #reading:
     shell_scripts.exec_reading(current_path + FILE[6:])
-    shell_scripts.execution_fib(True, "python multiple_regression.py ", current_path +FILE[6:] )
+    shell_scripts.exec_analysis(current_path + FILE[6:] )
 
 #This function does the analysis:
 def analysis(csv):

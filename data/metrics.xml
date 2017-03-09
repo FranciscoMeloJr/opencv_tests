@@ -6,18 +6,18 @@
 	<metric name="perf_thread_page_fault"></metric>
         <metric name="perf_thread_cache_misses"></metric>
         <metric name="perf_thread_instructions"></metric>
-	<metric name="perf:thread:cpu-cycles"></metric>
-	<metric name="perf:thread:cycles"></metric>
-	<metric name="perf:thread:context-switches"></metric>
+	<metric name="perf_thread_cpu_cycles"></metric>
+	<metric name="perf_thread_cycles"></metric>
+	<metric name="perf_thread_context_switches"></metric>
     </metrics>
     <limits>
-        <max name="1"></max>
+        <max name="10"></max>
     </limits>
     <repetition>
-        <times name="1"></times>
+        <times name="10"></times>
     </repetition>
     <file_name>
-        <file name="../../python_resultsTest.csv"></file>
+        <file name="../../python_resultsFace.csv"></file>
     </file_name>	
     <ext> 
        <path name="/ust/uid/1000/64-bit"></path>
@@ -25,8 +25,11 @@
     <type_of_file>
        <type name=".jpg"></type>
     </type_of_file>  
-    <type_of_program>
-       <program name="../fib_trace"></program>
+    <path_to_data>
+       <file_data name="face/"></file_data>
+    </path_to_data> 
+   <type_of_program>
+       <program name="../program_to_load_program2"></program>
     </type_of_program>
-
+    
 </data>

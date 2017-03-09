@@ -49,34 +49,29 @@ def take_y(list, flag):
 def take(list, flag, i):
     list_y = []
     for each in list:
-        if(flag):
-            print each[i]
-        list_y.append(each[i])
+        if(each[i] is not None):
+            if(flag):
+                print each[i]
+            list_y.append(each[i])
 
     list_y = np.array(list_y).astype(np.float)
     return list_y
 
-def take_x(list, flag):
-    list_x1 = []
-    list_x2 = []
-    list_x3 = []
-
-    list_x1 =  take(list, flag, 0)
-    list_x2 =  take(list, flag, 5)
-    list_x3 =  take(list, flag, 6)
+def take_x(list, flag, list_x):
 
     x = []
-    x.append(list_x1)
-    x.append(list_x2)
-    x.append(list_x3)
+    i = 0
+    while i < len(list_x):
+        x.append(take(list, flag, list_x[i]))
+        i = i + 1
     
     return x
         
-def run(file_to_open):
+def run(file_to_open, list_x):
     flag = False
     result = read_csv(flag, file_to_open)
     y = take_y(result, flag)
-    x = take_x(result, flag)
+    x = take_x(result, flag, list_x)
     print len(y)
     print len(x[0])
 
@@ -92,6 +87,11 @@ print 'Number of arguments:', len(sys.argv), 'arguments.'
 print 'Argument List:', str(sys.argv)
 
 if(len(sys.argv)> 2):
-    run(sys.argv[1])
+    if (len(sys.argv) == 2):
+        list_x = [0,5,6,7]
+        run(sys.argv[1],list_x)
+    if (len(sys.argv) > 2):
+        run(sys.argv[1], sys.argv[1])
 else:
-    run("/home/frank/Desktop/Research/OpenCV/python_resultsFib.csv")
+    list_x = [0,5,6,7]
+    run("/home/frank/Desktop/Research/OpenCV/python_resultsFace.csv",list_x)

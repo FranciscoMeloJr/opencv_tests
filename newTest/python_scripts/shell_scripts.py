@@ -2,26 +2,21 @@
 import subprocess
 
 #This function does the tracing, replacing the bash scripts:
-def trace(id, program, input):
-    season_name = " x "
+def trace(id, program, input, counter_list):
+    season_name = " y "
     image = input #image = "../data/500x500.jpg"
     print(input)
     i = 10
     output = "--output=/tmp/ust-traces-python-" + str(id)
     output_run = -1
-    counter_list = ["perf:thread:page-fault",
-                    "perf:thread:cache-misses",
-                    "perf:thread:instructions",
-                    "perf:thread:cpu-cycles",
-                    "perf:thread:cycles",
-                    "perf:thread:context-switches"]
+    max = len(counter_list)
 
     #do the process:
     subprocess.check_call("lttng create"+ season_name + output, shell=True)
     subprocess.check_call(["lttng enable-event -u -a"], shell=True)
     subprocess.check_call(["lttng enable-event -u sched_switch"], shell=True)
     j = 0
-    while (j < 6):
+    while (j < max):
         subprocess.check_call(["lttng add-context -u -t " + counter_list[j]], shell=True)
         j= j+1
 
@@ -85,7 +80,7 @@ def run_cases(id, flag):
     return ret
 
 #calling the function
-def run_opencv(flag, file, program):
+def run_opencv(flag, file, program, counter_list):
     trace_data = 0
     ret = -1
 
@@ -95,27 +90,33 @@ def run_opencv(flag, file, program):
         print (init)
     image_name = init
     trace_season = 3
-    ret = trace(trace_season, program, image_name)
+    ret = trace(trace_season, program, image_name, counter_list)
 
     return ret
 
 #calling the function
-def run_fib(flag, program, input):
+def run_fib(flag, program, input, counter_list):
     trace_data = 0
     ret = -1
 
     if(flag):
         print (input)
     trace_season = 5
-    ret = trace(trace_season, program, str(input))
+    ret = trace(trace_season, program, str(input), counter_list)
 
     return ret
 
 def execution_fib(flag, program, input):
     # execute a test calling the exec_program
+    counter_list = ["perf:thread:page-fault",
+                    "perf:thread:cache-misses",
+                    "perf:thread:instructions",
+                    "perf:thread:cpu-cycles",
+                    "perf:thread:cycles",
+                    "perf:thread:context-switches"]
     if(flag):
         print (execution_cv)
-    ret = run_fib(flag, program, input)
+    ret = run_fib(flag, program, input, counter_list)
     if (ret is not -1):
         print("Open the file: ", ret[9:])
         return ret[9:]
@@ -125,9 +126,15 @@ def execution_fib(flag, program, input):
 
 def execution_cv(flag, program, file):
     # execute a test calling the exec_program
+    counter_list = ["perf:thread:page-fault",
+                    "perf:thread:cache-misses",
+                    "perf:thread:instructions",
+                    "perf:thread:cpu-cycles",
+                    "perf:thread:cycles",
+                    "perf:thread:context-switches"]
     if(flag):
         print (execution_cv)
-    ret = run_opencv(flag, file, program)
+    ret = run_opencv(flag, file, program, counter_list)
     if (ret is not -1):
         print("Open the file: ", ret[9:])
         return ret[9:]
@@ -179,4 +186,10 @@ def trace_selected(image_name, id, list):
 
     return output
 
-#execution_fib(True, "../program_to_load_program", 5)
+# execute the program:
+def exec_analysis(input_value):
+   input = str(input_value)
+   program = "python multiple_regression.py "
+   subprocess.check_call(program + input, shell=True)
+
+    #execution_fib(True, "../program_to_load_program", 5)
