@@ -29,7 +29,7 @@ def take_all_metrics(trace_path, print_flag, counters_list, case, path):
         trace_path+=path
 
     print (trace_path, counters_list, print_flag, case)
-    counters_list = ['my_string_field', 'my_integer_field', 'elapsed', 'perf_thread_page_fault', 'perf_thread_cache_misses', 'perf_thread_instructions']
+    counters_list = ['my_string_field', 'my_integer_field', 'elapsed', 'perf_thread_page_fault', 'perf_thread_cache_misses', 'perf_thread_instructions', "perf_thread_cpu_cycles", "perf_thread_cycles", "perf_thread_context_switches"]
     return python_reader.readList(trace_path, counters_list, print_flag, case)
 
 #this function executes the OpenCV program and takes its results as a list:
@@ -51,7 +51,6 @@ def executeProgramCV(caseSelection, flag, letter, counters, ext_path, type_of_fi
         print_flag = flag
         # This module calls the reading module to read all the info:
         counters_list = counters
-
         #counters_list = ["my_string_field", "my_integer_field","elapsed", "perf_thread_page_fault", "perf_thread_cache_misses", "perf_thread_instructions"]
 
         listResults = take_all_metrics(tracePath, print_flag, counters_list, case, ext_path)
@@ -92,7 +91,7 @@ def write(flag, listAllResults, case, FILE):
     if (len(listAllResults) > 0):
         list = []
         data = case
-        metrics = ["workload","function", "version","elapsed time","perf_thread_page_fault", "perf_thread_cache_misses", "perf_thread_instructions"]
+        metrics = ["workload","function", "version","elapsed_time","perf_thread_page_fault", "perf_thread_cache_misses", "perf_thread_instructions", "perf:thread:cpu-cycles","perf:thread:cycles","perf:thread:context-switches"]
         # first_line = ["workload:", "version", "perf_thread_page_fault", "perf_thread_cache_misses", "perf_thread_instructions"]
         list.append(metrics)
 

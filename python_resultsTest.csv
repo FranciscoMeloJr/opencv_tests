@@ -1,0 +1,2 @@
+workload,function,version,elapsed_time,perf_thread_page_fault,perf_thread_cache_misses,perf_thread_instructions,perf:thread:cpu-cycles,perf:thread:cycles,perf:thread:context-switches
+1,face,3,160034,0,853,7142,33523,0,0

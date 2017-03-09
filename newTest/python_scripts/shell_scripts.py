@@ -9,13 +9,22 @@ def trace(id, program, input):
     i = 10
     output = "--output=/tmp/ust-traces-python-" + str(id)
     output_run = -1
+    counter_list = ["perf:thread:page-fault",
+                    "perf:thread:cache-misses",
+                    "perf:thread:instructions",
+                    "perf:thread:cpu-cycles",
+                    "perf:thread:cycles",
+                    "perf:thread:context-switches"]
+
     #do the process:
     subprocess.check_call("lttng create"+ season_name + output, shell=True)
     subprocess.check_call(["lttng enable-event -u -a"], shell=True)
     subprocess.check_call(["lttng enable-event -u sched_switch"], shell=True)
-    subprocess.check_call(["lttng add-context -u -t perf:thread:page-fault"], shell=True)
-    subprocess.check_call(["lttng add-context -u -t perf:thread:cache-misses"], shell=True)
-    subprocess.check_call(["lttng add-context -u -t perf:thread:instructions"], shell=True)
+    j = 0
+    while (j < 6):
+        subprocess.check_call(["lttng add-context -u -t " + counter_list[j]], shell=True)
+        j= j+1
+
 
     subprocess.check_call("lttng start" + season_name, shell=True)
 
