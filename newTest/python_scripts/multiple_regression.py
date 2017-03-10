@@ -86,7 +86,7 @@ def run(file_to_open, list_x):
 print 'Number of arguments:', len(sys.argv), 'arguments.'
 print 'Argument List:', str(sys.argv)
 
-if(len(sys.argv)> 2):
+if(len(sys.argv)> 1):
     if (len(sys.argv) == 2):
         list_x = [0,5,6,7]
         run(sys.argv[1],list_x)

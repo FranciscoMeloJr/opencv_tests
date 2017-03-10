@@ -256,10 +256,18 @@ def run(xml):
     if ('program_to_load_program' in program):
         run_cv(xml, True)
 
+    if ('parallel_preorder' in program):
+        run_fib(xml, True)
+
 if(len(sys.argv)> 2):
+    print("not default execution")
+    print(sys.argv[1])
     run(sys.argv[1])
 
 else:
+    print ("default execution")
+    #shell_scripts.kernel_trace(1)
     run('../../data/metrics.xml')
+    #shell_scripts.kernel_trace(-1)
     # run_cv( '../../data/metrics.xml',True)
     # call_analysis()

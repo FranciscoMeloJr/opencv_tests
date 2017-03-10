@@ -1,6 +1,20 @@
 #Shell function:
 import subprocess
 
+#This function does the kernel tracing, replacing the bash scripts:
+def kernel_trace(i):
+    season_name = "my-kernel-session"
+    if(i > 0):
+
+        subprocess.check_call("lttng create "+ season_name + " --output=/tmp/my-kernel-trace", shell=True)
+        #subprocess.check_call("lttng enable-event -k -a", shell=True)
+        subprocess.check_call("lttng enable-event -k kmem_cache_alloc", shell=True)
+        subprocess.check_call("lttng start", shell=True)
+    else:
+        subprocess.check_call("lttng stop " + season_name , shell=True)
+        subprocess.check_call("lttng destroy "+ season_name, shell=True)
+
+
 #This function does the tracing, replacing the bash scripts:
 def trace(id, program, input, counter_list):
     season_name = " y "
@@ -10,11 +24,14 @@ def trace(id, program, input, counter_list):
     output = "--output=/tmp/ust-traces-python-" + str(id)
     output_run = -1
     max = len(counter_list)
-
+    input = str(input)
     #do the process:
+    pre1 = "LD_PRELOAD=/usr/local/lib/liblttng-ust-cyg-profile.so "
+    pre2 = "LD_PRELOAD=/usr/local/lib/liblttng-ust-fork.so "
     subprocess.check_call("lttng create"+ season_name + output, shell=True)
     subprocess.check_call(["lttng enable-event -u -a"], shell=True)
-    subprocess.check_call(["lttng enable-event -u sched_switch"], shell=True)
+    #subprocess.check_call(["lttng enable-event -u sched_switch"], shell=True)
+    #subprocess.check_call(["lttng enable-event -u procname"], shell=True)
     j = 0
     while (j < max):
         subprocess.check_call(["lttng add-context -u -t " + counter_list[j]], shell=True)
@@ -26,7 +43,7 @@ def trace(id, program, input, counter_list):
     try:
         # program execution:
         try:
-            output_run = subprocess.check_output("LD_PRELOAD=/usr/local/lib/liblttng-ust-fork.so "+ program +" "+ input , shell=True)
+            output_run = subprocess.check_output(pre1 + program +" "+ input , shell=True)
         except ValueError:
             print ("error")
         subprocess.check_call("lttng stop", shell=True)
@@ -49,7 +66,9 @@ def trace(id, program, input, counter_list):
 def exec_program(input_value):
     input = str(input_value)
     program = "../program_to_load_program "
-    subprocess.check_call("LD_PRELOAD=/usr/local/lib/liblttng-ust-fork.so " + program + input, shell=True)
+    pre1 = "LD_PRELOAD=/usr/lib/liblttng-ust-cyg-profile.so "
+    pre2 =  "LD_PRELOAD=/usr/local/lib/liblttng-ust-fork.so "
+    subprocess.check_call(pre1 + program + input, shell=True)
 
 #execute the program:
 def exec_reading(file):
@@ -187,9 +206,18 @@ def trace_selected(image_name, id, list):
     return output
 
 # execute the program:
+def exec_tbb(input_value):
+   input = str(input_value)
+   program = "LD_PRELOAD=/usr/local/lib/liblttng-ust-fork.so /home/frank/Desktop/Research/tbb/examples/parallel_do/parallel_preorder/parallel_preorder "
+   subprocess.check_call(program + input, shell=True)
+
+# execute the program:
 def exec_analysis(input_value):
    input = str(input_value)
    program = "python multiple_regression.py "
    subprocess.check_call(program + input, shell=True)
 
-    #execution_fib(True, "../program_to_load_program", 5)
+#execution_fib(True, "../program_to_load_program", 5)
+
+#exec_tbb(2)
+trace("x", "/home/frank/Desktop/Research/tbb/examples/parallel_do/parallel_preorder/parallel_preorder", 1, [])
