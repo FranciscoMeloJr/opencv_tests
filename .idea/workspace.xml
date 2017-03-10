@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3c44736-c738-48aa-a9fd-03bcdd8f62e5" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/newTest/python_scripts/output.csv" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/metrics.xml" afterPath="$PROJECT_DIR$/data/metrics.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/newTest/python_scripts/main.py" afterPath="$PROJECT_DIR$/newTest/python_scripts/main.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/newTest/python_scripts/multiple_regression.py" afterPath="$PROJECT_DIR$/newTest/python_scripts/multiple_regression.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/newTest/python_scripts/shell_scripts.py" afterPath="$PROJECT_DIR$/newTest/python_scripts/shell_scripts.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python_resultsHough.csv" afterPath="$PROJECT_DIR$/python_resultsHough.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/newTest/python_scripts/analysis_mod.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -79,11 +75,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="shell_scripts.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="analysis_mod.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/newTest/python_scripts/analysis_mod.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="shell_scripts.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/newTest/python_scripts/shell_scripts.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="34" lean-forward="false" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
+            <state relative-caret-position="150">
+              <caret line="10" column="69" lean-forward="false" selection-start-line="10" selection-start-column="69" selection-end-line="10" selection-end-column="69" />
               <folding />
             </state>
           </provider>
@@ -137,6 +145,7 @@
         <option value="$PROJECT_DIR$/newTest/python_scripts/cla.py" />
         <option value="$PROJECT_DIR$/newTest/python_scripts/main.py" />
         <option value="$PROJECT_DIR$/newTest/python_scripts/shell_scripts.py" />
+        <option value="$PROJECT_DIR$/newTest/python_scripts/analysis_mod.py" />
       </list>
     </option>
   </component>
@@ -171,7 +180,7 @@
       <recent name="$PROJECT_DIR$/newTest" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.shell_scripts">
+  <component name="RunManager" selected="Python.analysis_mod">
     <configuration default="false" name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -206,23 +215,6 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="classifier" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="/usr/bin/python2.7" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/newTest/python_scripts" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="OpenCV" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/newTest/python_scripts/classifier.py" />
-      <option name="PARAMETERS" value="/tmp/ust-traces-../data/500x500.jpg-pf-1" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
     <configuration default="false" name="shell_scripts" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -253,6 +245,23 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="OpenCV" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/newTest/python_scripts/python_reader.py" />
+      <option name="PARAMETERS" value="/tmp/ust-traces-../data/500x500.jpg-pf-1" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="analysis_mod" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/bin/python2.7" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/newTest/python_scripts" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="OpenCV" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/newTest/python_scripts/analysis_mod.py" />
       <option name="PARAMETERS" value="/tmp/ust-traces-../data/500x500.jpg-pf-1" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -397,17 +406,17 @@
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.main (1)" />
       <item index="1" class="java.lang.String" itemvalue="Python.csv_module" />
-      <item index="2" class="java.lang.String" itemvalue="Python.classifier" />
-      <item index="3" class="java.lang.String" itemvalue="Python.shell_scripts" />
-      <item index="4" class="java.lang.String" itemvalue="Python.python_reader" />
+      <item index="2" class="java.lang.String" itemvalue="Python.shell_scripts" />
+      <item index="3" class="java.lang.String" itemvalue="Python.python_reader" />
+      <item index="4" class="java.lang.String" itemvalue="Python.analysis_mod" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.shell_scripts" />
-        <item index="1" class="java.lang.String" itemvalue="Python.main (1)" />
-        <item index="2" class="java.lang.String" itemvalue="Python.python_reader" />
-        <item index="3" class="java.lang.String" itemvalue="Python.csv_module" />
-        <item index="4" class="java.lang.String" itemvalue="Python.classifier" />
+        <item index="0" class="java.lang.String" itemvalue="Python.analysis_mod" />
+        <item index="1" class="java.lang.String" itemvalue="Python.shell_scripts" />
+        <item index="2" class="java.lang.String" itemvalue="Python.main (1)" />
+        <item index="3" class="java.lang.String" itemvalue="Python.python_reader" />
+        <item index="4" class="java.lang.String" itemvalue="Python.csv_module" />
       </list>
     </recent_temporary>
   </component>
@@ -476,13 +485,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/newTest/python_scripts/middleware.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="30" lean-forward="false" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/newTest/python_scripts/python_reader.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="750">
@@ -833,14 +835,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/newTest/python_scripts/csv_module.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/newTest/python_scripts/cla.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="885">
@@ -861,9 +855,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/newTest/python_scripts/shell_scripts.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="34" lean-forward="false" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
+        <state relative-caret-position="150">
+          <caret line="10" column="69" lean-forward="false" selection-start-line="10" selection-start-column="69" selection-end-line="10" selection-end-column="69" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/newTest/python_scripts/csv_module.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/newTest/python_scripts/analysis_mod.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
