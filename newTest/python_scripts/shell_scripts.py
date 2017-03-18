@@ -212,6 +212,11 @@ def exec_tbb(input_value):
    subprocess.check_call(program + input, shell=True)
 
 # execute the program:
+def exec_program(program, input_value):
+   input = str(input_value)
+   subprocess.check_call(program + input, shell=True)
+
+# execute the program:
 def exec_analysis(input_value):
    input = str(input_value)
    program = "python multiple_regression.py "
@@ -219,5 +224,6 @@ def exec_analysis(input_value):
 
 #execution_fib(True, "../program_to_load_program", 5)
 
-#exec_tbb(2)
+#exec_tbb(8)
 trace("x", "/home/frank/Desktop/Research/tbb/examples/parallel_do/parallel_preorder/parallel_preorder", 1, [])
+#exec_program("/home/frank/Desktop/Research/OpenCV/newTest/demo")

@@ -17,6 +17,7 @@ static struct timespec ts_start, ts_end;
 
 using namespace cv;
 using namespace std;
+
 int main( int argc, char** argv )
 {
     /*Spawn a child to run the program.*/
@@ -40,7 +41,7 @@ int main( int argc, char** argv )
 
                 tracepoint(hello_world, my_first_tracepoint, 3, "display");
                 //execv("../DisplaiImage/DisplayImage_3-0",argv);
-                //cout << argv[1];
+                cout << argv[1];
 		image = imread(argv[1], CV_LOAD_IMAGE_COLOR);   // Read the file
 		tracepoint(hello_world, my_first_tracepoint, 3, "display");
 		if(! image.data )                              // Check for invalid input
